@@ -210,9 +210,7 @@ public class Model {
         for(Player p:players){
             roundCard.add(p.remove());
         }
-        updatePlayers();//delete loser
-        cp.addCards(roundCard);
-        
+
         if(players.get(0).isUser()){
             String s = String.format("You drew '%s':\n", roundCard.get(0).getCardName()) +
                     String.format("   > size: %d\n", roundCard.get(0).getSize()) +
@@ -231,8 +229,16 @@ public class Model {
         category = getCategory(winner, roundCard.get(players.indexOf(winner)));
         winningCards = CardWithMaxValue(roundCard, category);
 
-
         winner = players.get(roundCard.indexOf(winningCards.get(0)));
+        updatePlayers();//delete loser
+        cp.addCards(roundCard);
+
+        if(!players.contains(winner)){
+            winner = players.get(0);
+        }
+
+
+
 
         /*
         if there is a draw

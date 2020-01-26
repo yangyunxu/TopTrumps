@@ -33,7 +33,7 @@ public class WriteTestLog {
         try {
             fw.write("Do you want to see past results or play a game?\n" +
                     "   1: Print Game Statistics\n" +
-                    "   2: Play game" +
+                    "   2: Play game\n" +
                     "   3: Quit game" +
                     "\n");
             fw.flush();

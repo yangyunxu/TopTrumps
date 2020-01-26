@@ -79,34 +79,39 @@ public class TopTrumpsCLIApplication {
 						if(game.getModel().getWinner().isUser()){
 
 						}
+						boolean lastWinnerIsUser = game.getModel().getWinner().isUser();
+						int numLast = game.getModel().getPlayers().get(0).getCards().size()-1;
 						HashMap<String,Object> maps = game.getModel().startRound(round);
 						//if user is alive
 						if(game.isUserAlive()){
-							s = String.format("You drew '%s':\n", game.getModel().getRoundCard().get(0).getCardName()) +
-									String.format("   > size: %d\n", game.getModel().getRoundCard().get(0).getSize()) +
-									String.format("   > speed: %d\n", game.getModel().getRoundCard().get(0).getSpeed()) +
-									String.format("   > range: %d\n", game.getModel().getRoundCard().get(0).getRange()) +
-									String.format("   > firepower: %d\n", game.getModel().getRoundCard().get(0).getFirepower()) +
-									String.format("   > cargo: %d\n", game.getModel().getRoundCard().get(0).getCargo());
-							log.writeString(s);
+							if(game.isUserAlive()){
+								s = String.format("You drew '%s':\n", game.getModel().getRoundCard().get(0).getCardName()) +
+										String.format("   > size: %d\n", game.getModel().getRoundCard().get(0).getSize()) +
+										String.format("   > speed: %d\n", game.getModel().getRoundCard().get(0).getSpeed()) +
+										String.format("   > range: %d\n", game.getModel().getRoundCard().get(0).getRange()) +
+										String.format("   > firepower: %d\n", game.getModel().getRoundCard().get(0).getFirepower()) +
+										String.format("   > cargo: %d\n", game.getModel().getRoundCard().get(0).getCargo());
+								log.writeString(s);
 
-							s = String.format("There are '%d cards in your deck\n", game.getModel().getPlayers().get(0).getCards().size());
-							log.writeString(s);
+								s = String.format("There are '%d cards in your deck\n", numLast);
+								log.writeString(s);
 
-							if(game.getModel().getWinner().isUser()){
-								s = String.format("It is your turn to select a category, the categories are:\n" +
-										"   1: size\n" +
-										"   2: speed\n" +
-										"   3: range\n" +
-										"   4: firepower\n" +
-										"   5: cargo\n" +
-										"Enter the number for your attribute: %d\n", game.getModel().getCategory());
+								if(lastWinnerIsUser){
+									s = String.format("It is your turn to select a category, the categories are:\n" +
+											"   1: size\n" +
+											"   2: speed\n" +
+											"   3: range\n" +
+											"   4: firepower\n" +
+											"   5: cargo\n" +
+											"Enter the number for your attribute: %d\n", game.getModel().getCategory());
+									log.writeString(s);
+								}
+							}else {
+								s = "You have Lost!\n";
 								log.writeString(s);
 							}
-						}else {
-							s = "You have Lost!\n";
-							log.writeString(s);
 						}
+
 
 						//round result
 						s = String.format(game.getModel().isDraw() ? String.format("Round %d: This round was a Draw, common pile now has %d cards\n", round, game.getModel().getComPile().getCards().size()) : String.format("Round %d: Player %s won this round\n", round, game.getModel().getWinner().getName())) +
@@ -120,7 +125,7 @@ public class TopTrumpsCLIApplication {
 						log.writeString(s);
 					}
 					System.out.print("Game End\n\n");
-					log.closeWriter();
+					//log.closeWriter();
 
 					break;
 				case 3:
