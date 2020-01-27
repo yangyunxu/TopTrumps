@@ -100,5 +100,14 @@
     <orderEntry type="library" name="Maven: io.dropwizard:dropwizard-views:1.2.2" level="project" />
     <orderEntry type="library" name="Maven: org.freemarker:freemarker:2.3.27-incubating" level="project" />
     <orderEntry type="library" name="Maven: mysql:mysql-connector-java:5.1.38" level="project" />
+    <orderEntry type="module-library">
+      <library>
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/../../Libs/mysql-connector-java-8.0.18.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
   </component>
 </module>

@@ -9,7 +9,7 @@ import java.io.IOException;
 public class WriteTestLog {
 
 
-    protected FileWriter fw;
+    private FileWriter fw;
 
     public WriteTestLog() {
         try {

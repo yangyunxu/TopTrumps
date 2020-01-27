@@ -8,7 +8,7 @@ public class Game {
 
 
     private Model model;
-    protected int round;
+    private int round;
 
     public Game(int numPeople) {
         if (numPeople < 2 || numPeople > 5) {
@@ -36,7 +36,7 @@ public class Game {
     }
 
     public boolean isUserAlive() {
-        return model.players.get(0).isUser();
+        return model.getPlayers().get(0).isUser();
     }
 
 }

@@ -1,8 +1,8 @@
 package basic;
 
 public class Card {
-    protected String description;
-    protected int[] categories;
+    private String description;
+    private int[] categories;
     /*
     0-size
     1-speed

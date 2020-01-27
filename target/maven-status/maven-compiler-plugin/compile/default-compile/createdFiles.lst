@@ -1,6 +1,7 @@
 basic\Game.class
 basic\CommunalPile.class
 online\configuration\TopTrumpsJSONConfiguration.class
+basic\Database.class
 online\dwResources\GameWebPagesResource.class
 online\dwResources\TopTrumpsRESTAPI.class
 online\TopTrumpsOnlineApplication.class

@@ -7,17 +7,19 @@ import java.util.*;
 
 public class Model {
 
-    protected ArrayList<Player> players;
-    protected ArrayList<Card> roundCard;
-    protected CommunalPile cp;
-    protected boolean isUser;
-    protected int category;
-    protected Scanner scanner;
-    protected Random random;
-    protected Player winner;
-    protected ArrayList<Card> winningCards;
-    protected HashMap<String, Object> winnerMap;
-    protected boolean Draw;
+    private ArrayList<Player> players, copy_players;
+    private ArrayList<Card> roundCard;
+    private CommunalPile cp;
+    private boolean isUser;
+    private int category;
+    private Scanner scanner;
+    private Random random;
+    private Player winner;
+    private ArrayList<Card> winningCards;
+    private HashMap<String, Object> winnerMap;
+    private boolean Draw;
+    private int numberOfDraws;
+    private int[] scoreOfPlayers;
 
 
     /*
@@ -32,6 +34,7 @@ public class Model {
             players.add(new Player(String.format("AI Player %d", i), false));
         }
 
+
         /*
         Parameter initialization
          */
@@ -41,6 +44,9 @@ public class Model {
         //the first player is selected at random
         random = new Random();
         winner = players.get(random.nextInt(players.size()));
+        numberOfDraws = 0;
+        scoreOfPlayers = new int[]{0, 0, 0, 0, 0};
+        copy_players = new ArrayList<>(players);
     }
 
     //distribute cards to players randomly
@@ -238,16 +244,16 @@ public class Model {
         }
 
 
-
-
         /*
         if there is a draw
          */
         if(winningCards.size()>1){
             Draw = true;
+            numberOfDraws++;
         }else {
             Draw = false;
             winner.addCards(cp.remove());
+            scoreOfPlayers[players.indexOf(winner)]++;
         }
 
         winnerMap = new HashMap<>();
@@ -287,6 +293,29 @@ public class Model {
 
     public CommunalPile getComPile(){
         return cp;
+    }
+
+    public int getNumberOfDraws(){
+        return numberOfDraws;
+    }
+
+    public int[] getScoreOfPlayers(){
+        return scoreOfPlayers;
+    }
+
+    public int getIndexOfPlayers(Player p){
+        return copy_players.indexOf(p);
+    }
+
+    public String scoreOneGame(){
+        String s = "\n";
+        s+=String.format("The overall winnder was %s\n", getWinner().getName());
+        s+="Scores:\n";
+        for(Player p:copy_players){
+            s+=String.format("   %s: %d\n", p.getName(),scoreOfPlayers[copy_players.indexOf(p)]);
+        }
+        s+="\n\n";
+        return s;
     }
 
 }

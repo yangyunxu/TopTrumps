@@ -6,9 +6,9 @@ import java.util.Queue;
 
 public class Player {
 
-    protected String name;
-    protected Queue<Card> cards;
-    protected boolean User;
+    private String name;
+    private Queue<Card> cards;
+    private boolean User;
 
     public Player(String s, boolean isUser){
         name = s;

@@ -6,7 +6,7 @@ import java.util.Collections;
 
 public class CommunalPile {
 
-    protected ArrayList<Card> cards;
+    private ArrayList<Card> cards;
 
     public CommunalPile(){
         cards = new ArrayList<Card>();

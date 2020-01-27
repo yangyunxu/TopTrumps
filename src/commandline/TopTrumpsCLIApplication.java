@@ -1,7 +1,9 @@
 package commandline;
 import basic.*;
+import com.sun.org.apache.bcel.internal.generic.ARRAYLENGTH;
 import org.ietf.jgss.GSSManager;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Scanner;
 
@@ -15,19 +17,26 @@ public class TopTrumpsCLIApplication {
 	 * command line mode. The contents of args[0] is whether we should write game logs to a file.
  	 * @param args
 	 */
+	private static int numberOfGames;//number of games
+	private static int numberOfMembers;
+	private int numHumanWin;//number of human wins
+	private int numAiWins;//number if AI wins
+	private int longestGame;
+
 	public static void main(String[] args) {
 		/*
 		these should be included in database
 		 */
-		int numberGames=0;//number of games
-		int numHumanWin=0;//number of human wins
-		int numAiWins=0;//number if AI wins
-		int numDraws=0;//number of draws overall
-		int longestGame=0;
+		Database db = new Database();
+
+		numberOfGames = db.getNumberOfGames();
+		numberOfMembers = 5;
 		int round;
 		String s;
 
+
 		Scanner scanner = new Scanner(System.in);
+
 
 		boolean writeGameLogsToFile = false; // Should we write game logs to file?
 		if (args[0].equalsIgnoreCase("true")) writeGameLogsToFile=true; // Command line selection
@@ -41,6 +50,7 @@ public class TopTrumpsCLIApplication {
 					"--- Top Trumps   ---\n" +
 					"--------------------\n" );
 		}
+
 
 		// Loop until the user wants to exit the game
 		while (!userWantsToQuit) {
@@ -60,12 +70,14 @@ public class TopTrumpsCLIApplication {
 
 			switch (typeIn){
 				case 1:
-					System.out.print("Game Statistics:\n");
+					//System.out.print("Game Statistics:\n");
+					System.out.println(db.toString());
 
 					break;
 				case 2:
+					numberOfGames++;
 					System.out.println("Game Start");
-					Game game = new Game(5);//there are 5 players in CLI Mode
+					Game game = new Game(numberOfMembers);//there are 5 players in CLI Mode
 					round = 0;
 
 					while (game.getModel().getPlayers().size()>1){
@@ -125,7 +137,25 @@ public class TopTrumpsCLIApplication {
 						log.writeString(s);
 					}
 					System.out.print("Game End\n\n");
+
+					System.out.print(game.getModel().scoreOneGame());
+					log.writeString(game.getModel().scoreOneGame());
+
 					//log.closeWriter();
+
+					ArrayList<Integer> data = new ArrayList();
+					data.add(numberOfGames);
+					data.add(numberOfMembers);
+					data.add(game.getModel().getNumberOfDraws());
+					data.add(game.getModel().getIndexOfPlayers(game.getModel().getWinner()));
+					data.add(round);
+					data.add(game.getModel().getScoreOfPlayers()[0]);
+					data.add(game.getModel().getScoreOfPlayers()[1]);
+					data.add(game.getModel().getScoreOfPlayers()[2]);
+					data.add(game.getModel().getScoreOfPlayers()[3]);
+					data.add(game.getModel().getScoreOfPlayers()[4]);
+
+					db.insert(data);
 
 					break;
 				case 3:
@@ -133,14 +163,12 @@ public class TopTrumpsCLIApplication {
 					break;
 			}
 
-			// ----------------------------------------------------
-			// Add your game logic here based on the requirements
-			// ----------------------------------------------------
 
-			
 		}
 
-
+		db.close();
 	}
+
+
 
 }
