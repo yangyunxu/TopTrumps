@@ -50,6 +50,23 @@ public class Card {
         return categories[4];
     }
 
+    public int getCategoryValue(int num){
+        switch (num){
+            case 1:
+                return categories[0];
+            case 2:
+                return categories[1];
+            case 3:
+                return categories[2];
+            case 4:
+                return categories[3];
+            case 5:
+                return categories[4];
+            default:
+                return 0;
+        }
+    }
+
 
 
 }

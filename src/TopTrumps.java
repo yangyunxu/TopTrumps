@@ -1,13 +1,13 @@
 import commandline.TopTrumpsCLIApplication;
-
 import online.TopTrumpsOnlineApplication;
-import org.hibernate.validator.internal.util.privilegedactions.GetResource;
+
+import java.io.IOException;
 
 
 public class TopTrumps {
 
 	/** This is the main class for the TopTrumps Applications */
-	public static void main(String[] args) {
+	public static void main(String[] args) throws IOException {
 		
 		System.out.println("--------------------");
 		System.out.println("--- Top Trumps   ---");

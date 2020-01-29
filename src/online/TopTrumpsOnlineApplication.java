@@ -65,6 +65,11 @@ public class TopTrumpsOnlineApplication extends Application<TopTrumpsJSONConfigu
 		// Registration tells Dropwizard to host a resource
 		environment.jersey().register(restAPI);
 		environment.jersey().register(gameScreen);
+
+
+		//core coding
+
+
 	}
 
     

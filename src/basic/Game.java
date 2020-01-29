@@ -1,7 +1,5 @@
 package basic;
 
-import com.sun.org.apache.xpath.internal.operations.Mod;
-
 import java.io.File;
 
 public class Game {
@@ -22,6 +20,7 @@ public class Game {
 //            System.out.println(p.getName()+" "+p.getCards().size());
 //        }
 
+        model.setPrintLost(false);
 
 
     }

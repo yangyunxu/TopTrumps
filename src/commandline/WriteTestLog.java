@@ -1,8 +1,5 @@
 package commandline;
 
-import basic.Game;
-import basic.Model;
-
 import java.io.FileWriter;
 import java.io.IOException;
 

@@ -1,9 +1,8 @@
 package basic;
 
-import java.awt.font.LineMetrics;
 import java.io.*;
-import java.math.RoundingMode;
 import java.util.*;
+import java.util.logging.Logger;
 
 public class Model {
 
@@ -17,9 +16,11 @@ public class Model {
     private Player winner;
     private ArrayList<Card> winningCards;
     private HashMap<String, Object> winnerMap;
-    private boolean Draw;
+    private boolean Draw, printLost;
     private int numberOfDraws;
     private int[] scoreOfPlayers;
+    private Logger mylogger;
+    private String info;
 
 
     /*
@@ -47,6 +48,8 @@ public class Model {
         numberOfDraws = 0;
         scoreOfPlayers = new int[]{0, 0, 0, 0, 0};
         copy_players = new ArrayList<>(players);
+        printLost = false;
+        mylogger = Logger.getLogger("toplog");
     }
 
     //distribute cards to players randomly
@@ -60,7 +63,27 @@ public class Model {
             while ((line = reader.readLine()) != null){
                 cardList.add(new Card(line));
             }
+            //write in log
+            mylogger.info("The contents of the complete deck has been read");
+            info = "";
+            for(Card c:cardList){
+                info+=c.getCardName();
+                info+= " ";
+            }
+            mylogger.info(info);
+            mylogger.info("----------------------------------");
+
             Collections.shuffle(cardList);
+
+            mylogger.info("The contents of the complete deck has been shuffled");
+            info="";
+            for(Card c:cardList){
+                info+=c.getCardName();
+                info+= " ";
+            }
+            mylogger.info(info);
+            mylogger.info("----------------------------------");
+
             Iterator<Player> it = players.iterator();
             for(Card c:cardList){
                 if(it.hasNext()){
@@ -70,6 +93,21 @@ public class Model {
                     it.next().add(c);
                 }
             }
+
+            //each player's deck
+            for(Player p:players){
+                info="";
+                info+=p.getName();
+                info+=": ";
+                for(Card c:p.getCards()){
+                    info+=c.getCardName();
+                    info+=" ";
+                }
+                mylogger.info(info);
+
+            }
+            mylogger.info("----------------------------------");
+
         }catch (FileNotFoundException e){
             e.printStackTrace();
         } catch (IOException e) {
@@ -172,6 +210,7 @@ public class Model {
     //winner choose the category to compare
     public int getCategory(Player player, Card c){
         int num;
+        String[] categories = {"size", "speed", "range", "firepower", "cargo"};
         if(player.isUser()){
             System.out.print("It is your turn to select a category, the categories are:\n" +
                     "   1: size\n" +
@@ -183,6 +222,8 @@ public class Model {
             num = scanner.nextInt();
             scanner.nextLine();
             if(num>=1 && num<=5){
+                mylogger.info(String.format("Player %s choose the category %s with value %d.", player.getName(), categories[num-1], c.getCategoryValue(num)));
+                mylogger.info("----------------------------------");
                 return num;
             }else {
                 System.out.println("Please enter a right number again: 1 - 5");
@@ -217,6 +258,14 @@ public class Model {
             roundCard.add(p.remove());
         }
 
+        info="";
+        for(Card c: roundCard){
+            info+=c.getCardName();
+            info+=" ";
+        }
+        mylogger.info(info);
+        mylogger.info("----------------------------------");
+
         if(players.get(0).isUser()){
             String s = String.format("You drew '%s':\n", roundCard.get(0).getCardName()) +
                     String.format("   > size: %d\n", roundCard.get(0).getSize()) +
@@ -228,19 +277,19 @@ public class Model {
             s = String.format("There are '%d cards in your deck\n", players.get(0).getCards().size());
             System.out.print(s);
         }else {
-            System.out.print("You have Lost!\n");
+            if(!printLost){
+                System.out.print("You have Lost!\n");
+                printLost=true;
+            }
+
         }
 
         //compare value
         category = getCategory(winner, roundCard.get(players.indexOf(winner)));
         winningCards = CardWithMaxValue(roundCard, category);
 
-        winner = players.get(roundCard.indexOf(winningCards.get(0)));
-        updatePlayers();//delete loser
-        cp.addCards(roundCard);
-
-        if(!players.contains(winner)){
-            winner = players.get(0);
+        if(winningCards.size()==1){
+            winner = players.get(roundCard.indexOf(winningCards.get(0)));
         }
 
 
@@ -250,15 +299,38 @@ public class Model {
         if(winningCards.size()>1){
             Draw = true;
             numberOfDraws++;
+            cp.addCards(roundCard);
+            mylogger.info(String.format("The communalPile add %d cards, together %d cards", roundCard.size(), cp.getCards().size()));
+            mylogger.info("----------------------------------");
         }else {
             Draw = false;
-            winner.addCards(cp.remove());
+            winner.addCards(roundCard);
+            if(cp.getCards().size()>0){
+                winner.addCards(cp.remove());
+                mylogger.info(String.format("The communalPile remove %d cards, and left 0 cards", cp.getCards().size()));
+                mylogger.info("----------------------------------");
+            }
             scoreOfPlayers[players.indexOf(winner)]++;
         }
+
+        updatePlayers();//delete loser
 
         winnerMap = new HashMap<>();
         winnerMap.put("winner", winner);
         winnerMap.put("winningCard", winningCards.get(0));
+
+        for(Player p:players){
+            info="";
+            info+=p.getName();
+            info+=": ";
+            for(Card c:p.getCards()){
+                info+=c.getCardName();
+                info+=" ";
+            }
+            mylogger.info(info);
+
+        }
+        mylogger.info("----------------------------------");
 
         return winnerMap;
     }
@@ -316,6 +388,10 @@ public class Model {
         }
         s+="\n\n";
         return s;
+    }
+
+    public void setPrintLost(boolean b){
+        printLost = b;
     }
 
 }
