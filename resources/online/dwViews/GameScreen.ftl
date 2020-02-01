@@ -116,6 +116,18 @@
 				xhr.send();
 			}
 
+			function nextRound() {
+				var xhr = createCORSRequest('GET', "http://localhost:7777/toptrumps/nextRound"); // Request type and URL
+				if (!xhr) {
+					alert("CORS not supported");
+				}
+				xhr.onload = function(e) {
+					var responseText = xhr.response; // the text of the respon
+
+				}
+				xhr.send();
+			}
+
 			function helloJSONList() {
 				var xhr = createCORSRequest('GET', "http://localhost:7777/toptrumps/helloJSONList"); // Request type and URL
 				if (!xhr) {

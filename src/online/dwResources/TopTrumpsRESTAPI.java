@@ -16,6 +16,7 @@ import javax.ws.rs.core.MediaType;
 import basic.*;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.sun.org.apache.bcel.internal.generic.ARRAYLENGTH;
+import com.sun.org.apache.bcel.internal.generic.LSHL;
 import online.configuration.TopTrumpsJSONConfiguration;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -37,6 +38,7 @@ public class TopTrumpsRESTAPI {
 	private ArrayList<Card> winningCards;
 	private int[] scoreOfPlayers;
 	private boolean draw;
+	private boolean gameContinue;
 
 
 
@@ -56,6 +58,7 @@ public class TopTrumpsRESTAPI {
 		round = 0;
 		draws = 0;
 		scoreOfPlayers = new int[]{0, 0, 0, 0, 0};
+		gameContinue = true;
 	}
 
 	@GET
@@ -147,7 +150,6 @@ public class TopTrumpsRESTAPI {
 	public String getCategory() throws IOException{
 		int num;
 		String[] categories = {"size", "speed", "range", "firepower", "cargo"};
-		drawCards();
 		if(!winner.isUser()){
 			Card c = roundCard.get(players.indexOf(winner));
 			//AI choose category which is the max
@@ -180,6 +182,11 @@ public class TopTrumpsRESTAPI {
 		ArrayList<Object> list = new ArrayList<>();
 		list.add(draw);
 		list.add(winner.getName());
+		if(players.size()==1){
+			gameContinue = false;
+			inserDatabase();
+		}
+		list.add(gameContinue);
 		return oWriter.writeValueAsString(list);
 	}
 
@@ -188,6 +195,26 @@ public class TopTrumpsRESTAPI {
 	@Path("/userName")
 	public void setUserName(@QueryParam("name") String name) throws IOException {
 		userName = name;
+	}
+
+	@GET
+	@Path("/nextRound")
+	public String nextRound() throws IOException{
+		drawCards();
+		HashMap<String, String> map = new HashMap<>();
+		if(players.get(0).isUser()){
+			map.put("userAlive", "true");
+			map.put("numberInDeck", String.valueOf(players.get(0).getCards().size()));
+			map.put("CardName", roundCard.get(0).getCardName());
+			map.put("size", String.valueOf(roundCard.get(0).getSize()));
+			map.put("speed", String.valueOf(roundCard.get(0).getSpeed()));
+			map.put("range", String.valueOf(roundCard.get(0).getRange()));
+			map.put("firepower", String.valueOf(roundCard.get(0).getFirepower()));
+			map.put("cargo", String.valueOf(roundCard.get(0).getCargo()));
+		}else {
+			map.put("userAlive", "false");
+		}
+		return oWriter.writeValueAsString(map);
 	}
 
 	public void updatePlayers(){
@@ -307,4 +334,22 @@ public class TopTrumpsRESTAPI {
 		}
 
 	}
+
+
+	public void inserDatabase() {
+		ArrayList<Integer> data = new ArrayList();
+		data.add(numberGames);//number of games
+		data.add(copy_players.size());//number of members this game
+		data.add(draws);//number of draws this game
+		data.add(copy_players.indexOf(winner));//winner
+		data.add(round);//number of round this game
+		data.add(scoreOfPlayers[0]);//the score of user this game
+		data.add(scoreOfPlayers[1]);//the score of AI player 1 this game
+		data.add(scoreOfPlayers[2]);//the score of AI player 2 this game
+		data.add(scoreOfPlayers[3]);//the score of AI player 3 this game
+		data.add(scoreOfPlayers[4]);//the score of AI player 4 this game
+
+		Database.insert(data);
+	}
+
 }
