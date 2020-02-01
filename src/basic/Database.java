@@ -8,13 +8,13 @@ public class Database {
 	protected static Statement stmt = null;
 	protected static ResultSet rs = null;
 	
-	public Database() {
-		connection();
-		createTable();
-}
+//	public Database() {
+//		connection();
+//		createTable();
+//}
 	
 	//connect to the database
-	public void connection() {
+	public static void connection() {
 		try {
 			Class.forName("com.mysql.cj.jdbc.Driver");
 			// Class.forName("org.postgresql.Driver");
@@ -43,7 +43,7 @@ public class Database {
 	}
 	
 	//close 
-	public void close() {
+	public static void close() {
 		try{
 			stmt.close();
 			conn.close();
@@ -55,7 +55,7 @@ public class Database {
 	}
 	
 	//if table is not exist in the database, then create a table named record
-	public void createTable() {
+	public static void createTable() {
 		try{
 			stmt.execute("create table if not exists record (Times integer,NumberOfMembers integer,NumberOfDraws integer,Winner varchar(64),Rounds integer,coreOfPlayerYou integer,ScoreOfPlayerAI1 integer,ScoreOfPlayerAI2 integer,ScoreOfPlayerAI3 integer,ScoreOfPlayerAI4 integer,primary key(Times));");
 		}catch(Exception e) {
@@ -68,7 +68,7 @@ public class Database {
 	//insert data
 	//data is an array including times, numberOfMembers, numberOfDraws, winner, rounds, 
 	//	scoreOfPlayerYou, scoreOfPlayerAI1, scoreOfPlayerAI2, scoreOfPlayerAI3, scoreOfPlayerAI4
-	public void insert(ArrayList<Integer> data) {
+	public static void insert(ArrayList<Integer> data) {
 		try {
 			PreparedStatement preparedStatement = null;
 			preparedStatement = conn.prepareStatement("insert into record values (?,?,?,?,?,?,?,?,?,? )");
@@ -108,7 +108,7 @@ public class Database {
 	}
 	
 	//Number of games
-	public int getNumberOfGames() {
+	public static int getNumberOfGames() {
 		int numberOfGames = 0;
 		try {
 			rs = stmt.executeQuery("select count(*) from record");
@@ -123,7 +123,7 @@ public class Database {
 	}
 	
 	//Number of human wins
-	public int getNumberOfHumanWins() {
+	public static int getNumberOfHumanWins() {
 		int numberOfHumanWins = 0;
 		try {
 			rs = stmt.executeQuery("select count(*) from record where winner = 'PlayerYou'");
@@ -138,7 +138,7 @@ public class Database {
 	}
 	
 	//Number of AI wins
-	public int getNumberOfAIWins() {
+	public static int getNumberOfAIWins() {
 		int numberOfAIWins = 0;
 		try {
 			rs = stmt.executeQuery("select count(*) from record "
@@ -157,7 +157,7 @@ public class Database {
 	}
 	
 	//average number of draws
-	public double getAverageNumberOfDraws() {
+	public static double getAverageNumberOfDraws() {
 		double averageNumberOfDraws = 0.0;
 		try {
 			rs = stmt.executeQuery("select count(*), sum(NumberOfDraws) from record");
@@ -176,7 +176,7 @@ public class Database {
 	}
 	
 	//longest game
-	public int getLongestGame() {
+	public static int getLongestGame() {
 		int longestGame = 0;
 		try {
 			rs = stmt.executeQuery("select max(Rounds) from record");
@@ -191,13 +191,13 @@ public class Database {
 	}
 	
 	//query
-	@Override
-	public String toString() {
-		String result = "Number of Games: " + this.getNumberOfGames() + "\n"
-				+ "Number of Human Wins: " + this.getNumberOfHumanWins() + "\n"
-				+ "Number of AI Wins: " + this.getNumberOfAIWins() + "\n"
-				+ "Average Number of Draws: " + this.getAverageNumberOfDraws() + "\n"
-				+ "Longest Game: " + this.getLongestGame() + "\n\n\n";
+
+	public static String printString() {
+		String result = "Number of Games: " + getNumberOfGames() + "\n"
+				+ "Number of Human Wins: " + getNumberOfHumanWins() + "\n"
+				+ "Number of AI Wins: " + getNumberOfAIWins() + "\n"
+				+ "Average Number of Draws: " + getAverageNumberOfDraws() + "\n"
+				+ "Longest Game: " + getLongestGame() + "\n\n\n";
 		return result;
 	}
 }

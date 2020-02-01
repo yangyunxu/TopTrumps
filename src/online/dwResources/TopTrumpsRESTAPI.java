@@ -11,6 +11,7 @@ import javax.ws.rs.Produces;
 import javax.ws.rs.QueryParam;
 import javax.ws.rs.core.MediaType;
 
+import basic.*;
 import online.configuration.TopTrumpsJSONConfiguration;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -19,39 +20,56 @@ import com.fasterxml.jackson.databind.ObjectWriter;
 @Path("/toptrumps") // Resources specified here should be hosted at http://localhost:7777/toptrumps
 @Produces(MediaType.APPLICATION_JSON) // This resource returns JSON content
 @Consumes(MediaType.APPLICATION_JSON) // This resource can take JSON content as input
-/**
- * This is a Dropwizard Resource that specifies what to provide when a user
- * requests a particular URL. In this case, the URLs are associated to the
- * different REST API methods that you will need to expose the game commands
- * to the Web page.
- * 
- * Below are provided some sample methods that illustrate how to create
- * REST API methods in Dropwizard. You will need to replace these with
- * methods that allow a TopTrumps game to be controled from a Web page.
- */
+
 public class TopTrumpsRESTAPI {
 
-	/** A Jackson Object writer. It allows us to turn Java objects
-	 * into JSON strings easily. */
 	ObjectWriter oWriter = new ObjectMapper().writerWithDefaultPrettyPrinter();
-	
-	/**
-	 * Contructor method for the REST API. This is called first. It provides
-	 * a TopTrumpsJSONConfiguration from which you can get the location of
-	 * the deck file and the number of AI players.
-	 * @param conf
-	 */
-	public TopTrumpsRESTAPI(TopTrumpsJSONConfiguration conf) {
-		// ----------------------------------------------------
-		// Add relevant initalization here
-		// ----------------------------------------------------
+
+	public TopTrumpsRESTAPI(TopTrumpsJSONConfiguration conf) throws IOException {
+		launchGame();
 	}
-	
-	// ----------------------------------------------------
-	// Add relevant API methods here
-	// ----------------------------------------------------
-	
-	
+
+	@GET
+	@Path("/launchGame")
+	public void launchGame() throws IOException {
+		Database.connection();
+		Database.createTable();
+	}
+
+	@GET
+	@Path("/numberGames")
+	public int numberOfGames() throws IOException {
+		return Database.getNumberOfGames();
+	}
+
+	@GET
+	@Path("/numberHumanWins")
+	public int numberOfHumanWins() throws IOException {
+		return Database.getNumberOfHumanWins();
+	}
+
+	@GET
+	@Path("/numberAiWins")
+	public int getNumberOfAiWins() throws IOException {
+		return Database.getNumberOfAIWins();
+	}
+
+	@GET
+	@Path("/numberOfAverageDraws")
+	public double numberOfAverageDraws() throws IOException {
+		return Database.getAverageNumberOfDraws();
+	}
+
+	@GET
+	@Path("/longestRounds")
+	public int numberOfLongestRounds() throws IOException {
+
+		return Database.getLongestGame();
+	}
+
+
+
+
 	@GET
 	@Path("/helloJSONList")
 	/**

@@ -29,9 +29,9 @@ public class TopTrumpsCLIApplication {
 		/*
 		these should be included in database
 		 */
-        Database db = new Database();
-
-        numberOfGames = db.getNumberOfGames();
+		Database.connection();
+		Database.createTable();
+        numberOfGames = Database.getNumberOfGames();
         numberOfMembers = 5;
         int round;
         String s;
@@ -79,7 +79,7 @@ public class TopTrumpsCLIApplication {
             switch (typeIn) {
                 case 1:
                     //System.out.print("Game Statistics:\n");
-                    System.out.println(db.toString());
+                    System.out.println(Database.printString());
 
                     break;
                 case 2:
@@ -159,18 +159,18 @@ public class TopTrumpsCLIApplication {
 
                     //insert data into database
                     ArrayList<Integer> data = new ArrayList();
-                    data.add(numberOfGames);
-                    data.add(numberOfMembers);
-                    data.add(game.getModel().getNumberOfDraws());
-                    data.add(game.getModel().getIndexOfPlayers(game.getModel().getWinner()));
-                    data.add(round);
-                    data.add(game.getModel().getScoreOfPlayers()[0]);
-                    data.add(game.getModel().getScoreOfPlayers()[1]);
-                    data.add(game.getModel().getScoreOfPlayers()[2]);
-                    data.add(game.getModel().getScoreOfPlayers()[3]);
-                    data.add(game.getModel().getScoreOfPlayers()[4]);
+                    data.add(numberOfGames);//number of games
+                    data.add(numberOfMembers);//number of members this game
+                    data.add(game.getModel().getNumberOfDraws());//number of draws this game
+                    data.add(game.getModel().getIndexOfPlayers(game.getModel().getWinner()));//winner
+                    data.add(round);//number of round this game
+                    data.add(game.getModel().getScoreOfPlayers()[0]);//the score of user this game
+                    data.add(game.getModel().getScoreOfPlayers()[1]);//the score of AI player 1 this game
+                    data.add(game.getModel().getScoreOfPlayers()[2]);//the score of AI player 2 this game
+                    data.add(game.getModel().getScoreOfPlayers()[3]);//the score of AI player 3 this game
+                    data.add(game.getModel().getScoreOfPlayers()[4]);//the score of AI player 4 this game
 
-                    db.insert(data);
+                    Database.insert(data);
 
                     break;
                 case 3:
@@ -182,7 +182,7 @@ public class TopTrumpsCLIApplication {
 
         }
 
-        db.close();
+        Database.close();
     }
 
 
