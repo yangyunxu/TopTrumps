@@ -32,21 +32,9 @@
 		
 			// Method that is called on page load
 			function initalize() {
-			
-				// --------------------------------------------------------------------------
-				// You can call other methods you want to run when the page first loads here
-				// --------------------------------------------------------------------------
-				
-				// For example, lets call our sample methods
-				helloJSONList();
-				helloWord("Student");
-				
+
 			}
-			
-			// -----------------------------------------
-			// Add your other Javascript methods Here
-			// -----------------------------------------
-		
+
 			// This is a reusable method for creating a CORS request. Do not edit this.
 			function createCORSRequest(method, url) {
   				var xhr = new XMLHttpRequest();
@@ -76,7 +64,57 @@
 		
 		<!-- Here are examples of how to call REST API Methods -->
 		<script type="text/javascript">
-		
+
+			function numberAiPlayers(number) {
+				var xhr = createCORSRequest('GET', "http://localhost:7777/toptrumps/numberAi?number="+number); // Request type and URL+parameters
+				if (!xhr) {
+					alert("CORS not supported");
+				}
+				xhr.send();
+			}
+
+			function setUserName(name) {
+				var xhr = createCORSRequest('GET', "http://localhost:7777/toptrumps/userName?name="+name); // Request type and URL+parameters
+				if (!xhr) {
+					alert("CORS not supported");
+				}
+				xhr.send();
+			}
+
+			function getCategory() {
+				var xhr = createCORSRequest('GET', "http://localhost:7777/toptrumps/getCategory"); // Request type and URL
+				if (!xhr) {
+					alert("CORS not supported");
+				}
+				xhr.onload = function(e) {
+					var responseText = xhr.response; // the text of the response
+					//if receive 0, winner is user and should choose category
+					if(responseText==0){
+						//display user category
+					}
+				};
+				xhr.send();
+			}
+
+			function getUserCategory(number) {
+				var xhr = createCORSRequest('GET', "http://localhost:7777/toptrumps/getUserCategory?number="+number); // Request type and URL+parameters
+				if (!xhr) {
+					alert("CORS not supported");
+				}
+				xhr.send();
+			}
+
+			function showWinner() {
+				var xhr = createCORSRequest('GET', "http://localhost:7777/toptrumps/showWinner"); // Request type and URL
+				if (!xhr) {
+					alert("CORS not supported");
+				}
+				xhr.onload = function(e) {
+					var responseText = xhr.response; // the text of the respon
+
+				}
+				xhr.send();
+			}
 
 			function helloJSONList() {
 				var xhr = createCORSRequest('GET', "http://localhost:7777/toptrumps/helloJSONList"); // Request type and URL
@@ -88,11 +126,9 @@
 
 			function helloWord(word) {
 				var xhr = createCORSRequest('GET', "http://localhost:7777/toptrumps/helloWord?Word="+word); // Request type and URL+parameters
-
 				if (!xhr) {
   					alert("CORS not supported");
 				}
-
 				xhr.send();		
 			}
 

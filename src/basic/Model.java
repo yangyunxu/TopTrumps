@@ -239,7 +239,7 @@ public class Model {
             for(int i=1;i<5;i++){
                 if(c.getCategories()[i]>tempInt){
                     tempInt = c.getCategories()[i];
-                    num = i;
+                    num = i+1;
                 }
             }
             return num;
@@ -288,9 +288,9 @@ public class Model {
         category = getCategory(winner, roundCard.get(players.indexOf(winner)));
         winningCards = CardWithMaxValue(roundCard, category);
 
-        if(winningCards.size()==1){
-            winner = players.get(roundCard.indexOf(winningCards.get(0)));
-        }
+//        if(winningCards.size()==1){
+//            winner = players.get(roundCard.indexOf(winningCards.get(0)));
+//        }
 
 
         /*
@@ -304,13 +304,14 @@ public class Model {
             mylogger.info("----------------------------------");
         }else {
             Draw = false;
+            winner = players.get(roundCard.indexOf(winningCards.get(0)));
             winner.addCards(roundCard);
             if(cp.getCards().size()>0){
                 winner.addCards(cp.remove());
                 mylogger.info(String.format("The communalPile remove %d cards, and left 0 cards", cp.getCards().size()));
                 mylogger.info("----------------------------------");
             }
-            scoreOfPlayers[players.indexOf(winner)]++;
+            scoreOfPlayers[copy_players.indexOf(winner)]++;
         }
 
         updatePlayers();//delete loser
