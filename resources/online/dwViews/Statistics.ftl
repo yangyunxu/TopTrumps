@@ -33,11 +33,7 @@
 			// Method that is called on page load
 			function initalize() {
 			
-				getNumberOfGames();
-				getNumberOfHumanwins();
-				getNumberOfAiWins();
-				getNumberOfAverageDraws();
-				getNumberOfLongestRounds();
+				getStatistics();
 				
 			}
 			
@@ -76,45 +72,14 @@
 		<script type="text/javascript">
 		
 			// This calls the helloJSONList REST method from TopTrumpsRESTAPI
-			function getNumberOfGames() {
-				var xhr = createCORSRequest('GET', "http://localhost:7777/toptrumps/numberGames"); // Request type and URL
+			function getStatistics() {
+				var xhr = createCORSRequest('GET', "http://localhost:7777/toptrumps/getStatistics"); // Request type and URL
 				if (!xhr) {
 					alert("CORS not supported");
 				}
 				xhr.send();
 			}
 
-			function getNumberOfHumanwins() {
-				var xhr = createCORSRequest('GET', "http://localhost:7777/toptrumps/numberHumanWins"); // Request type and URL
-				if (!xhr) {
-					alert("CORS not supported");
-				}
-				xhr.send();
-			}
-
-			function getNumberOfAiWins() {
-				var xhr = createCORSRequest('GET', "http://localhost:7777/toptrumps/numberAiWins"); // Request type and URL
-				if (!xhr) {
-					alert("CORS not supported");
-				}
-				xhr.send();
-			}
-
-			function getNumberOfAverageDraws() {
-				var xhr = createCORSRequest('GET', "http://localhost:7777/toptrumps/numberOfAverageDraws"); // Request type and URL
-				if (!xhr) {
-					alert("CORS not supported");
-				}
-				xhr.send();
-			}
-
-			function getNumberOfLongestRounds() {
-				var xhr = createCORSRequest('GET', "http://localhost:7777/toptrumps/longestRounds"); // Request type and URL
-				if (!xhr) {
-					alert("CORS not supported");
-				}
-				xhr.send();
-			}
 
 
 		</script>

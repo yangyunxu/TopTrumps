@@ -17,6 +17,7 @@ import basic.*;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.sun.org.apache.bcel.internal.generic.ARRAYLENGTH;
 import com.sun.org.apache.bcel.internal.generic.LSHL;
+import javafx.beans.binding.ObjectExpression;
 import online.configuration.TopTrumpsJSONConfiguration;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -62,34 +63,16 @@ public class TopTrumpsRESTAPI {
 	}
 
 	@GET
-	@Path("/numberGames")
-	public int numberOfGames() throws IOException {
-		return Database.getNumberOfGames();
-	}
+	@Path("/getStatistics")
+	public String getStatistics() throws IOException {
+		ArrayList<Object> array = new ArrayList<>();
+		array.add(Database.getNumberOfGames());
+		array.add(Database.getNumberOfHumanWins());
+		array.add(Database.getNumberOfAIWins());
+		array.add(Database.getAverageNumberOfDraws());
+		array.add(Database.getLongestGame());
 
-	@GET
-	@Path("/numberHumanWins")
-	public int numberOfHumanWins() throws IOException {
-		return Database.getNumberOfHumanWins();
-	}
-
-	@GET
-	@Path("/numberAiWins")
-	public int getNumberOfAiWins() throws IOException {
-		return Database.getNumberOfAIWins();
-	}
-
-	@GET
-	@Path("/numberOfAverageDraws")
-	public double numberOfAverageDraws() throws IOException {
-		return Database.getAverageNumberOfDraws();
-	}
-
-	@GET
-	@Path("/longestRounds")
-	public int numberOfLongestRounds() throws IOException {
-
-		return Database.getLongestGame();
+		return oWriter.writeValueAsString(array);
 	}
 
 	/*
@@ -203,6 +186,8 @@ public class TopTrumpsRESTAPI {
 		drawCards();
 		HashMap<String, String> map = new HashMap<>();
 		if(players.get(0).isUser()){
+			map.put("Round", String.valueOf(round));
+			map.put("activePlayer", winner.getName());
 			map.put("userAlive", "true");
 			map.put("numberInDeck", String.valueOf(players.get(0).getCards().size()));
 			map.put("CardName", roundCard.get(0).getCardName());
@@ -240,9 +225,10 @@ public class TopTrumpsRESTAPI {
 	}
 
 	public String playerWithRoundCard(int num) throws IOException {
-		HashMap<Object, Object> map = new HashMap<>();
+		HashMap<String, Object> map = new HashMap<>();
 		for(Player p:players){
-			map.put(p, roundCard.get(players.indexOf(p)));
+
+			map.put(p.getName()+","+String.valueOf(p.getCards().size()), roundCard.get(players.indexOf(p)));
 		}
 		map.put("Category", num);
 		String result = oWriter.writeValueAsString(map);
