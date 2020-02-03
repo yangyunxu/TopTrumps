@@ -12,28 +12,65 @@
 		<!-- Optional Styling of the Website, for the demo I used Bootstrap (see https://getbootstrap.com/docs/4.0/getting-started/introduction/) -->
 		<link rel="stylesheet" href="http://dcs.gla.ac.uk/~richardm/TREC_IS/bootstrap.min.css">
     	<script src="http://dcs.gla.ac.uk/~richardm/vex.combined.min.js"></script>
-    	<script>vex.defaultOptions.className = 'vex-theme-os';</script>
+    	<script>vex.defaultOptions.className = 'vex-theme-os';</script> 
     	<link rel="stylesheet" href="http://dcs.gla.ac.uk/~richardm/assets/stylesheets/vex.css"/>
     	<link rel="stylesheet" href="http://dcs.gla.ac.uk/~richardm/assets/stylesheets/vex-theme-os.css"/>
     	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+		
+		<!-- new added file -->
+    	<link rel="stylesheet" href="../assets/game.css">
 
 	</head>
 
-    <body onload="initalize()"> <!-- Call the initalize method when the page loads -->
+    <body onload> <!-- Call the initalize method when the page loads -->
     	
     	<div class="container">
-
+    		<div class="row center-block text-light title">
+    			<h1>Top Trumps Game</h1>
+    		</div>
+    		<div class="row center-block text-light status">
+    			<h1>Round 1 : Players have drawn their cards</h1>
+    		</div>
 			<!-- Add your HTML Here -->
-		
+			<div class="row center-block gameArea">
+				<div class="catSelect span3">
+					<span id="active">The active player is <span id="activePlayer"></span></span>
+					<div id="selected">
+						<span>They selected Cargo</span>
+					</div>
+					<div class="btngroup">
+						<span id="next">Next: Category Selection</span>
+						<span id="show">Show Winner</span>
+						<span id="new">Next Round</span>
+					</div>
+					<div class="selection" id="selection">
+						<ul class="selection-menu" role="menu" aria-labelledby="dropdownMenu">
+						  <li>Size</li>
+						  <li>Speed</li>
+						  <li>Range</li>
+						  <li>Firepower</li>
+						  <li>Cargo</li>
+						</ul>
+					</div>
+				</div>
+				<div class="cardsYou span4">
+				</div>
+				<div class="cardsAI span5">
+				</div>
+			</div>
+			<div class="goBack">
+				<a href="http://localhost:7777/toptrumps/">Go back to selection page </a>
+				<a href="http://localhost:7777/toptrumps/stats">Go to statistics page</a>
+			</div>	
 		</div>
 		
 		<script type="text/javascript">
 		
 			// Method that is called on page load
-			function initalize() {
+			// function initalize() {
 
-			}
+			// }
 
 			// This is a reusable method for creating a CORS request. Do not edit this.
 			function createCORSRequest(method, url) {
@@ -59,92 +96,24 @@
   				 }
   				 return xhr;
 			}
-		
+		var data = {	
+			"round":"",
+			"userAlive":true,
+			"user":{},
+			"players":[],
+			"activePlayer":2,
+			"winner":"",
+			"selected":"Value",
+			"continue":true,
+			"drew":false
+		}
+		var userName = "imuser";
+		var playerNum = location.search.split("=")[1];
 		</script>
-		
+	
 		<!-- Here are examples of how to call REST API Methods -->
-		<script type="text/javascript">
-
-			function numberAiPlayers(number) {
-				var xhr = createCORSRequest('GET', "http://localhost:7777/toptrumps/numberAi?number="+number); // Request type and URL+parameters
-				if (!xhr) {
-					alert("CORS not supported");
-				}
-				xhr.send();
-			}
-
-			function setUserName(name) {
-				var xhr = createCORSRequest('GET', "http://localhost:7777/toptrumps/userName?name="+name); // Request type and URL+parameters
-				if (!xhr) {
-					alert("CORS not supported");
-				}
-				xhr.send();
-			}
-
-			function getCategory() {
-				var xhr = createCORSRequest('GET', "http://localhost:7777/toptrumps/getCategory"); // Request type and URL
-				if (!xhr) {
-					alert("CORS not supported");
-				}
-				xhr.onload = function(e) {
-					var responseText = xhr.response; // the text of the response
-					//if receive 0, winner is user and should choose category
-					if(responseText==0){
-						//display user category
-					}
-				};
-				xhr.send();
-			}
-
-			function getUserCategory(number) {
-				var xhr = createCORSRequest('GET', "http://localhost:7777/toptrumps/getUserCategory?number="+number); // Request type and URL+parameters
-				if (!xhr) {
-					alert("CORS not supported");
-				}
-				xhr.send();
-			}
-
-			function showWinner() {
-				var xhr = createCORSRequest('GET', "http://localhost:7777/toptrumps/showWinner"); // Request type and URL
-				if (!xhr) {
-					alert("CORS not supported");
-				}
-				xhr.onload = function(e) {
-					var responseText = xhr.response; // the text of the respon
-
-				}
-				xhr.send();
-			}
-
-			function nextRound() {
-				var xhr = createCORSRequest('GET', "http://localhost:7777/toptrumps/nextRound"); // Request type and URL
-				if (!xhr) {
-					alert("CORS not supported");
-				}
-				xhr.onload = function(e) {
-					var responseText = xhr.response; // the text of the respon
-
-				}
-				xhr.send();
-			}
-
-			function helloJSONList() {
-				var xhr = createCORSRequest('GET', "http://localhost:7777/toptrumps/helloJSONList"); // Request type and URL
-				if (!xhr) {
-  					alert("CORS not supported");
-				}
-				xhr.send();		
-			}
-
-			function helloWord(word) {
-				var xhr = createCORSRequest('GET', "http://localhost:7777/toptrumps/helloWord?Word="+word); // Request type and URL+parameters
-				if (!xhr) {
-  					alert("CORS not supported");
-				}
-				xhr.send();		
-			}
-
-		</script>
-		
+		<script src="../assets/xhrRequest.js"></script>
+		<script src="../assets/game.js"></script>
+		<script src="../assets/btnClick.js"></script>
 		</body>
 </html>

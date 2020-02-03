@@ -1,0 +1,120 @@
+
+*{
+	padding: 0;
+	margin: 0;
+}
+body{
+	background-image: linear-gradient(#888, #fff);
+	
+}
+li{
+	list-style: none;
+	margin: 8px 0;
+}
+h1{
+	font-size: 18px;
+}
+.title{
+	padding: 15px 20px;
+	background-color: #333;
+}
+.status{
+	padding: 15px 20px;
+	background-color: #6495ED;
+}
+.gameArea{
+	padding: 20px 10px;
+	width: 100%;
+}
+.catSelect{
+	width: 25%;
+	display: inline-block;
+}
+.catSelect span{
+	display: block;
+	color: #fff;
+	padding: 5px 5px 5px 15px;
+}
+#active{
+	background-color: #6495ED;
+	margin: 0;
+}
+#activePlayer{
+	display: block;
+	padding: 5px 0;
+	font-size: 16px;
+}
+.btngroup span{
+	background-color: #31b431;
+	cursor: pointer;
+	padding: 10px 15px;
+}
+.cardsYou{
+	display: inline-block;
+	margin-left: 20px;
+	width: 20%;
+}
+.cardsAI{
+	width: 45%;
+	display:inline-block;
+	margin-left: 20px;
+}
+.cardsAI .cardt{
+	width: 40%;
+	margin-left: 9%;
+}
+.cardt{
+	margin-left: 20px;
+	display: inline-block;
+	margin-bottom: 20px;
+	background-color: #fff;
+	border-radius: 5px;
+}
+#cardImg img{
+	width: 100%;
+}
+.name{
+	display: block;
+	background-color: #31b431;
+	padding: 10px 15px;
+	color: #fff;			
+}
+#cardName span{
+	margin-left: 5px;
+}
+#cardName{
+	padding: 10px;
+}
+#category{
+	padding-left: 15px;
+	margin-top: 15px;
+}
+#selected span{
+	background-color: #fff;
+	color: #333;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+.selection{
+	background-color: #fff;
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+.selection li{
+	cursor: pointer;
+	padding: 5px 5px 5px 15px;
+}
+.selection li:hover{
+	background-color: #31b431;
+	color: #fff;
+}
+.goBack{
+	float: right;
+
+}
+.goBack a{
+	display: inline-block;
+	padding: 10px 30px;
+	background-color: #333;
+	color: white;
+}

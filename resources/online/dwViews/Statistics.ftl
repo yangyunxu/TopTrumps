@@ -27,7 +27,7 @@
             <p class="header-title" style="color:white;line-height: 40px;margin-left: 10px;">Top Trumps Games</p>
         </div>
         <div id="function-left" style="background-color:#FAEBD7;margin-top:10px;">
-            <p style="margin-left: 10px;height: 30px;line-height: 30px;">New Game</p>
+            <p style="margin-left: 10px;height: 30px;line-height: 30px;">Game Statistics</p>
         </div>
     </div>
     <script type="text/javascript">

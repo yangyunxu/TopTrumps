@@ -38,6 +38,12 @@
     	<artifactId>mysql-connector-java</artifactId>
     	<version>5.1.38</version>
 	</dependency>
+	<!-- https://mvnrepositry.com/artifact/io.dropwizard/dropwizard-assets -->
+	<dependency>
+    	<groupId>io.dropwizard</groupId>
+		<artifactId>dropwizard-assets</artifactId>
+		<version>${dropwizard.version}</version>
+	</dependency>
     
   </dependencies>
   
