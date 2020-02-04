@@ -60,6 +60,7 @@ public class TopTrumpsRESTAPI {
 		draws = 0;
 		scoreOfPlayers = new int[]{0, 0, 0, 0, 0};
 		gameContinue = true;
+		draw = false;
 	}
 
 	@GET
