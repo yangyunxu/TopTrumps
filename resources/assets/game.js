@@ -11,7 +11,8 @@
 		var responseText = nextRound();
 		console.log(responseText);
 		data.userAlive = responseText.userAlive;
-		if (data.userAlive) {
+		data.round = Number(responseText.Round)+1;
+		if (data.userAlive != "false") {
 			var userObject = {};
 			userObject["name"] = userName;
 			userObject["cardName"] = responseText.CardName;
@@ -23,7 +24,6 @@
 				"range":responseText.range,
 				"firepower":responseText.firepower
 			}
-			data.round = Number(responseText.Round)+1;
 			data.user = userObject;
 			if ( responseText.activePlayer == userName ) {
 				data.activePlayer = userName;
@@ -31,7 +31,6 @@
 				data.activePlayer = responseText.activePlayer;
 			}
 		}
-
 		console.log(data.activePlayer);
 	}
 	var initializeUser = () =>{
@@ -39,7 +38,7 @@
 		updateDataUser();
 		$(".status h1").html("Round "+data.round+" Players have drawn their cards");
 		//initialize you in the first round
-		if (data.userAlive) {
+		if (data.userAlive != "false") {
 			cardsYou += "<div class='cardt' id='"+data.user.name+"'>"+
 						"<span class='name'>"+data.user.name+"</span>"+
 						"<div id='cardName'>"+data.user.cardName+" <span class='badge badge-primary'>"+data.user.cardNum+"</span></div>"+

@@ -186,9 +186,9 @@ public class TopTrumpsRESTAPI {
 	public String nextRound() throws IOException{
 		drawCards();
 		HashMap<String, String> map = new HashMap<>();
+		map.put("Round", String.valueOf(round));
+		map.put("activePlayer", winner.getName());
 		if(players.get(0).isUser()){
-			map.put("Round", String.valueOf(round));
-			map.put("activePlayer", winner.getName());
 			map.put("userAlive", "true");
 			map.put("numberInDeck", String.valueOf(players.get(0).getCards().size()));
 			map.put("CardName", roundCard.get(0).getCardName());
@@ -282,7 +282,7 @@ public class TopTrumpsRESTAPI {
 							maxCard = tempCards.get(i);
 							tempWinningCards.clear();
 							tempWinningCards.add(maxCard);
-						}else if(maxCard.getSize()==tempCards.get(i).getSize()){
+						}else if(maxCard.getSpeed()==tempCards.get(i).getSpeed()){
 							tempWinningCards.add(tempCards.get(i));
 						}
 						break;
@@ -291,7 +291,7 @@ public class TopTrumpsRESTAPI {
 							maxCard = tempCards.get(i);
 							tempWinningCards.clear();
 							tempWinningCards.add(maxCard);
-						}else if(maxCard.getSize()==tempCards.get(i).getSize()){
+						}else if(maxCard.getRange()==tempCards.get(i).getRange()){
 							tempWinningCards.add(tempCards.get(i));
 						}
 						break;
@@ -300,7 +300,7 @@ public class TopTrumpsRESTAPI {
 							maxCard = tempCards.get(i);
 							tempWinningCards.clear();
 							tempWinningCards.add(maxCard);
-						}else if(maxCard.getSize()==tempCards.get(i).getSize()){
+						}else if(maxCard.getFirepower()==tempCards.get(i).getFirepower()){
 							tempWinningCards.add(tempCards.get(i));
 						}
 						break;
@@ -309,7 +309,7 @@ public class TopTrumpsRESTAPI {
 							maxCard = tempCards.get(i);
 							tempWinningCards.clear();
 							tempWinningCards.add(maxCard);
-						}else if(maxCard.getSize()==tempCards.get(i).getSize()){
+						}else if(maxCard.getCargo()==tempCards.get(i).getCargo()){
 							tempWinningCards.add(tempCards.get(i));
 						}
 						break;
