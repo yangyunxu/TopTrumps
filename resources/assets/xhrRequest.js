@@ -1,3 +1,14 @@
+function launchGame(){
+    $.ajax({
+        type:'GET',
+        url:"http://localhost:7777/toptrumps/launchGame",
+        dataType:'json',
+        async:false,
+        success:function(data){
+            response = data;
+        }
+    });
+}
 function numberAiPlayers(number) {
 	$.ajax({
         type:'GET',

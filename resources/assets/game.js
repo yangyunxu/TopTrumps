@@ -43,7 +43,7 @@
 			cardsYou += "<div class='cardt' id='"+data.user.name+"'>"+
 						"<span class='name'>"+data.user.name+"</span>"+
 						"<div id='cardName'>"+data.user.cardName+" <span class='badge badge-primary'>"+data.user.cardNum+"</span></div>"+
-						"<div id='cardImg'><img src='../assets/"+data.user.cardName+".jpg'></div>"+
+						"<div id='cardImg'><img src='../assets/images/"+data.user.cardName+".jpg'></div>"+
 						"<ul id='category'>"+
 							"<li>Size, "+data.user.card.size+"</li>"+
 							"<li>Speed, "+data.user.card.speed+"</li>"+
@@ -81,7 +81,7 @@
 		}
 		console.log(objAi);
 		$.each(objAi,function(player,info){
-			if (player != "Category" && player.split(",")[0] != userName) {
+			if (player != "Category" && player.split(",")[0] != userName && player.split(",")[0] != "") {
 				var ai = {};
 				ai["name"] = player.split(",")[0];
 				ai["cardName"] = info.cardName;
@@ -117,7 +117,7 @@
 			cardsAI += "<div class='cardt' id='"+player+"'>"+
 							"<span class='name'>"+data.players[index].name+"</span>"+
 							"<div id='cardName'>"+data.players[index].cardName+" <span class='badge badge-primary'>"+data.players[index].cardNum+"</span></div>"+
-							"<div id='cardImg'><img src='../assets/"+data.players[index].cardName+".jpg'></div>"+
+							"<div id='cardImg'><img src='../assets/images/"+data.players[index].cardName+".jpg'></div>"+
 							"<ul id='category'>"+
 								"<li>Size, "+data.players[index].card.size+"</li>"+
 								"<li>Speed, "+data.players[index].card.speed+"</li>"+

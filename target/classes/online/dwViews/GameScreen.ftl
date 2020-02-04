@@ -23,7 +23,7 @@
 
 	</head>
 
-    <body onload> <!-- Call the initalize method when the page loads -->
+    <body> <!-- Call the initalize method when the page loads -->
     	
     	<div class="container">
     		<div class="row center-block text-light title">
@@ -68,9 +68,6 @@
 		<script type="text/javascript">
 		
 			// Method that is called on page load
-			// function initalize() {
-
-			// }
 
 			// This is a reusable method for creating a CORS request. Do not edit this.
 			function createCORSRequest(method, url) {
@@ -113,6 +110,9 @@
 	
 		<!-- Here are examples of how to call REST API Methods -->
 		<script src="../assets/xhrRequest.js"></script>
+		<script type="text/javascript">
+			launchGame();
+		</script>
 		<script src="../assets/game.js"></script>
 		<script src="../assets/btnClick.js"></script>
 		</body>

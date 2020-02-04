@@ -30,6 +30,9 @@
             <p style="margin-left: 10px;height: 30px;line-height: 30px;">Game Statistics</p>
         </div>
     </div>
+		<div class="goBack" style="margin-left:11%;">
+			<a href="http://localhost:7777/toptrumps/" style="display:inline-block;padding:10px 30px;background-color:#333;color:white;">Go back to selection page </a>
+		</div>
     <script type="text/javascript">
     // Method that is called on page load
     function initalize() {
