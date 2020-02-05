@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<dataset>
+  <advisor ADVID="1" ADVNAME="McReader"/>
+  <advisor ADVID="2" ADVNAME="Burn"/>
+  <advisor ADVID="3" ADVNAME="Edward"/>
+  <city HCID="BD" HCNAME="Bradford"/>
+  <city HCID="GL" HCNAME="Glasgow"/>
+  <city HCID="MU" HCNAME="Munich"/>
+  <city HCID="RM" HCNAME="Rome"/>
+  <employee SSN="1" FName="Philip" Salary="30000"/>
+  <employee SSN="1" FName="Philip" Salary="30000"/>
+  <employee SSN="2" FName="Stella" Salary="40000"/>
+  <employee SSN="2" FName="Stella" Salary="40000"/>
+  <employee SSN="3" FName="Lona" Salary="50000"/>
+  <employee SSN="1" FName="Philip" Salary="30000"/>
+  <newemployee SSN="1" FName="Philip" Salary="30000"/>
+  <newemployee SSN="2" FName="Stella" Salary="40000"/>
+  <newemployee SSN="3" FName="Yang" Salary="50000"/>
+  <newemployee SSN="4" FName="Qiu" Salary="40000"/>
+  <newemployee SSN="5" FName="Sun" Salary="30000"/>
+  <newemployee SSN="6" FName="Hu" Salary="60000"/>
+  <newemployee SSN="7" FName="Cai" Salary="80000"/>
+  <newemployee SSN="8" FName="Tian" Salary="30000"/>
+  <newemployee SSN="9" FName="Jin" Salary="70000"/>
+  <newemployee SSN="10" FName="Yuan" Salary="70000"/>
+  <newemployee SSN="11" FName="Zhang" Salary="80000"/>
+  <project/>
+  <record Times="2" NumberOfMembers="4" NumberOfDraws="57" Winner="PlayerAI!" Rounds="489" ScoreOfPlayerYou="12" ScoreOfPlayerAI1="4" ScoreOfPlayerAI2="5" ScoreOfPlayerAI3="4" ScoreOfPlayerAI4="4"/>
+  <student/>
+  <teacher/>
+  <team/>
+  <topic/>
+</dataset>

@@ -1,4 +1,4 @@
-package DBunit;
+package DBUnit;
 
 public class ExecuteDeleteException extends Exception {
 	public ExecuteDeleteException() {

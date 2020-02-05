@@ -1,4 +1,4 @@
-package DBunit;
+package DBUnit;
 
 public class ExecuteInsertException extends Exception {
 	public ExecuteInsertException() {

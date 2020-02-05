@@ -1,4 +1,4 @@
-package DBunit;
+package DBUnit;
 
 import org.dbunit.database.IDatabaseConnection;
 
@@ -12,8 +12,6 @@ import org.junit.AfterClass;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
-import basic.Database;
-
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertNull;
@@ -23,6 +21,7 @@ import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.sql.Connection;
 import java.sql.SQLException;
 import java.util.ArrayList;
 
@@ -43,6 +42,14 @@ public class TestDBunit {
 		FlatXmlDataSet.write(data, new FileOutputStream("dataset.xml"));
 	}
 	
+	//test connection
+	@Test
+	public void testDBManagerConnection() 
+			throws ClassNotFoundException, SQLException{
+		Connection conn= DBManager.getConnection();
+		conn.close();
+	}
+		
 	//test insert
 	@SuppressWarnings("deprecation")
 	@Test
@@ -67,6 +74,7 @@ public class TestDBunit {
 		assertEquals(re.getNumberOfMembers(), recordTwo.getNumberOfMembers());
 		assertEquals(re.getNumberOfDraws(), recordTwo.getNumberOfDraws());
 		assertEquals(re.getWinner(), recordTwo.getWinner());
+		assertEquals(re.getRounds(),recordTwo.getRounds());
 		assertEquals(re.getScoreOfPlayerYou(), recordTwo.getScoreOfPlayerYou());
 		assertEquals(re.getScoreOfPlayerAI1(), recordTwo.getScoreOfPlayerAI1());
 		assertEquals(re.getScoreOfPlayerAI2(), recordTwo.getScoreOfPlayerAI2());
@@ -107,6 +115,7 @@ public class TestDBunit {
 		assertEquals(re.getNumberOfMembers(), recordTwo.getNumberOfMembers());
 		assertEquals(re.getNumberOfDraws(), recordTwo.getNumberOfDraws());
 		assertEquals(re.getWinner(), recordTwo.getWinner());
+		assertEquals(re.getRounds(), recordTwo.getRounds());
 		assertEquals(re.getScoreOfPlayerYou(), recordTwo.getScoreOfPlayerYou());
 		assertEquals(re.getScoreOfPlayerAI1(), recordTwo.getScoreOfPlayerAI1());
 		assertEquals(re.getScoreOfPlayerAI2(), recordTwo.getScoreOfPlayerAI2());
@@ -135,6 +144,14 @@ public class TestDBunit {
 	}
 	
 	//test method in Class Database
+	//test connection and close method in the Class Database
+	@Test
+	public void testConnectionInClassDatabase() 
+			throws ClassNotFoundException, SQLException{
+		RecordDAO.connection();
+		RecordDAO.close();
+	}
+	
 	//test insert method in Class Database
 	//test insert
 	@Test
@@ -187,6 +204,7 @@ public class TestDBunit {
 		assertEquals(re.getNumberOfMembers(), recordTwo.getNumberOfMembers());
 		assertEquals(re.getNumberOfDraws(), recordTwo.getNumberOfDraws());
 		assertEquals(re.getWinner(), recordTwo.getWinner());
+		assertEquals(re.getRounds(),recordTwo.getRounds());
 		assertEquals(re.getScoreOfPlayerYou(), recordTwo.getScoreOfPlayerYou());
 		assertEquals(re.getScoreOfPlayerAI1(), recordTwo.getScoreOfPlayerAI1());
 		assertEquals(re.getScoreOfPlayerAI2(), recordTwo.getScoreOfPlayerAI2());

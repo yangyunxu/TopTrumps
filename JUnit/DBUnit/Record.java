@@ -1,4 +1,4 @@
-package DBunit;
+package DBUnit;
 
 import java.util.ArrayList;
 

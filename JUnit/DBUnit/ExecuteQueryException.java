@@ -1,4 +1,4 @@
-package DBunit;
+package DBUnit;
 
 public class ExecuteQueryException extends Exception {
 	public ExecuteQueryException() {

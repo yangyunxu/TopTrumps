@@ -1,4 +1,4 @@
-package DBunit;
+package DBUnit;
 
 public class NotFoundDataException extends Exception {
 	public NotFoundDataException() {

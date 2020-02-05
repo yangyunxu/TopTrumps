@@ -1,4 +1,4 @@
-package DBunit;
+package DBUnit;
 
 public class ExecuteUpdateException extends Exception {
 	public ExecuteUpdateException() {
