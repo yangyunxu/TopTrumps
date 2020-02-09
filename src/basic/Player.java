@@ -22,7 +22,7 @@ public class Player {
 
     public void addCards(ArrayList<Card> manyCards){
         for(Card c:manyCards){
-            cards.add(c);
+            cards.offer(c);
         }
     }
 
