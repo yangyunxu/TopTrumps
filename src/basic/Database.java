@@ -16,16 +16,16 @@ public class Database {
 	//connect to the database
 	public static void connection() {
 		try {
-			Class.forName("com.mysql.cj.jdbc.Driver");
+			Class.forName("org.postgresql.Driver");
 			// Class.forName("org.postgresql.Driver");
 		}catch (ClassNotFoundException e) {
 			e.printStackTrace();
 			return;
 		}
 
-		String url = "jdbc:mysql://localhost:3306/localhost?useUnicode=true&characterEncoding=utf-8&useSSL=false";
-		String user = "root";
-		String password = "YYX97sheng";
+		String url = "jdbc:postgresql://52.24.215.108:5432/Lifeordeath";
+		String user = "Lifeordeath";
+		String password = "Lifeordeath";
 
 //		String url = "jdbc:postgresql://yacata.dcs.gla.ac.uk:5432/m_19_2479926y";
 //		String user = "m_19_2479926y";
