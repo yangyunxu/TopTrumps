@@ -111,12 +111,6 @@
 		<!-- Here are examples of how to call REST API Methods -->
 		<script src="../assets/xhrRequest.js"></script>
 		<script type="text/javascript">
-			$(function(){
-			    if($.cookie("reloaded")!="true"){
-			            window.location.reload();
-			            $.cookie("reloaded","true");
-			    }
-			});
 			launchGame();
 		</script>
 		<script src="../assets/game.js"></script>

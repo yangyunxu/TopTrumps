@@ -25,13 +25,9 @@
 				"firepower":responseText.firepower
 			}
 			data.user = userObject;
-			if ( responseText.activePlayer == userName ) {
-				data.activePlayer = userName;
-			}else{
-				data.activePlayer = responseText.activePlayer;
-			}
 		}
-		console.log(data.activePlayer);
+		
+		data.activePlayer = responseText.activePlayer;
 	}
 	var initializeUser = () =>{
 		var cardsYou = "";
@@ -145,4 +141,7 @@
 		numberAiPlayers(playerNum);
 		setUserName(userName);
 		initializeUser();
+	    if(data.activePlayer==""){
+	            window.location.reload();
+	    }
 

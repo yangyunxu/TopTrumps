@@ -30,7 +30,7 @@
         <p class="header-title" style="color:white;line-height: 40px;margin-left: 10px">Top Trumps Games</p>
     </div>
 
-    <div style="background-color:#FFFFFF;width: 550px;float: left;margin-top: 10px;">
+    <div style="background-color:#FFFFFF;width: 49%;float: left;margin-top: 10px;">
         <div id="function-left" style="background-color:#FAEBD7;">
             <p style="margin-left: 10px;height: 30px;line-height: 30px;">New Game</p>
         </div>
@@ -77,7 +77,7 @@
 
     </div>
 
-    <div style="background-color:#FFFFFF;width: 550px;float: right;margin-top: 10px;">
+    <div style="background-color:#FFFFFF;width: 49%;float: right;margin-top: 10px;">
         <div id="function-right" style="background-color:#FAEBD7;">
             <p style="margin-left: 10px;height: 30px;line-height: 30px;">Game Statistics</p>
         </div>
