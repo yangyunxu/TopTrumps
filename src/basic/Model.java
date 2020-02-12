@@ -382,7 +382,7 @@ public class Model {
 
     public String scoreOneGame(){
         String s = "\n";
-        s+=String.format("The overall winnder was %s\n", getWinner().getName());
+        s+=String.format("The overall winner was %s\n", getWinner().getName());
         s+="Scores:\n";
         for(Player p:copy_players){
             s+=String.format("   %s: %d\n", p.getName(),scoreOfPlayers[copy_players.indexOf(p)]);
