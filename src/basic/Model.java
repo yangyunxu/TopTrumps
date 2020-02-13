@@ -9,7 +9,6 @@ public class Model {
     private ArrayList<Player> players, copy_players;
     private ArrayList<Card> roundCard;
     private CommunalPile cp;
-    private boolean isUser;
     private int category;
     private Scanner scanner;
     private Random random;
@@ -288,10 +287,6 @@ public class Model {
         category = getCategory(winner, roundCard.get(players.indexOf(winner)));
         winningCards = CardWithMaxValue(roundCard, category);
 
-//        if(winningCards.size()==1){
-//            winner = players.get(roundCard.indexOf(winningCards.get(0)));
-//        }
-
 
         /*
         if there is a draw
@@ -336,16 +331,11 @@ public class Model {
         return winnerMap;
     }
 
-    //whether is a draw
-    public boolean isDraw(){
-        return Draw;
-    }
-
     public int getCategory(){
         return category;
     }
 
-
+    public boolean isDraw(){return Draw;}
     //get the winner's card each round
     public Card getWinningCard(){
         return winningCards.get(0);
