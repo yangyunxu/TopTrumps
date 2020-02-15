@@ -176,6 +176,7 @@ public class TopTrumpsCLIApplication {
                 case 3:
                     userWantsToQuit = true; // use this when the user wants to exit the game
                     log.closeWriter();//stop to write statistics data
+                    fileHandler.close();
                     break;
             }
 

@@ -82,51 +82,12 @@ public class TestDBunit {
 		assertEquals(re.getScoreOfPlayerAI4(), recordTwo.getScoreOfPlayerAI4());
 	}
 	
-	//test delete
-	@Test(expected=NotFoundDataException.class)
-	public void testRecordDelete() 
-			throws ClassNotFoundException, SQLException, ExecuteDeleteException, ExecuteQueryException, NotFoundDataException{
-		RecordDAO.deleteRecord(1);
-		Record re = RecordDAO.queryRecord(1);
-		assertNull(re);
-	}
-	
-	//test update
-	@Test
-	public void testRecordUpdate()
-			throws ClassNotFoundException, SQLException, ExecuteUpdateException, ExecuteQueryException, NotFoundDataException{
-		Record re = new Record();
-		re.setTimes(2);
-		re.setNumberOfMember(5);
-		re.setNumberOfDraws(50);
-		re.setWinner("PlayerAI1");
-		re.setRounds(100);
-		re.setScoreOfPlayerYou(11);
-		re.setScoreOfPlayerAI1(12);
-		re.setScoreOfPlayerAI2(9);
-		re.setScoreOfPlayerAI3(8);
-		re.setScoreOfPlayerAI4(10);
-		
-		RecordDAO.updateRecord(re);
-		Record recordTwo = RecordDAO.queryRecord(2);
-		assertNotNull(recordTwo);
-		
-		assertEquals(re.getTimes(), recordTwo.getTimes());
-		assertEquals(re.getNumberOfMembers(), recordTwo.getNumberOfMembers());
-		assertEquals(re.getNumberOfDraws(), recordTwo.getNumberOfDraws());
-		assertEquals(re.getWinner(), recordTwo.getWinner());
-		assertEquals(re.getRounds(), recordTwo.getRounds());
-		assertEquals(re.getScoreOfPlayerYou(), recordTwo.getScoreOfPlayerYou());
-		assertEquals(re.getScoreOfPlayerAI1(), recordTwo.getScoreOfPlayerAI1());
-		assertEquals(re.getScoreOfPlayerAI2(), recordTwo.getScoreOfPlayerAI2());
-		assertEquals(re.getScoreOfPlayerAI3(), recordTwo.getScoreOfPlayerAI3());
-		assertEquals(re.getScoreOfPlayerAI4(), recordTwo.getScoreOfPlayerAI4());
-	}
+
 	
 	//test query
 	@Test(expected=NotFoundDataException.class)
 	public void testRecordQuery()
-			throws ClassNotFoundException, SQLException, ExecuteQueryException, NotFoundDataException{
+		 	throws ClassNotFoundException, SQLException, ExecuteQueryException, NotFoundDataException{
 		Record re = new Record();
 		re.setTimes(90);
 		re.setNumberOfMember(4);
@@ -233,7 +194,7 @@ public class TestDBunit {
 		int number = RecordDAO.getNumberOfGames();
 		RecordDAO.insertRecord(re);
 		double currentNumber = RecordDAO.getAverageNumberOfDraws();
-		double error = 2;
+		double error = 10;
 		assertEquals(originalNumber*number+50,currentNumber*(number+1),error);
 	}
 	

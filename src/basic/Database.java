@@ -7,11 +7,7 @@ public class Database {
 	protected static Connection conn = null;
 	protected static Statement stmt = null;
 	protected static ResultSet rs = null;
-	
-//	public Database() {
-//		connection();
-//		createTable();
-//}
+
 	
 	//connect to the database
 	public static void connection() {
@@ -160,14 +156,10 @@ public class Database {
 	public static double getAverageNumberOfDraws() {
 		double averageNumberOfDraws = 0.0;
 		try {
-			rs = stmt.executeQuery("select count(*), sum(NumberOfDraws) from record");
+			rs = stmt.executeQuery("select AVG(NumberOfDraws) from record");
 			rs.next();
-			if(rs.getInt(1)==0){
-				return 0.0;
-			}else {
-				averageNumberOfDraws = rs.getInt(2)/rs.getInt(1);
-				return averageNumberOfDraws;
-			}
+			averageNumberOfDraws = rs.getInt(1);
+			return averageNumberOfDraws;
 		}catch(Exception e) {
 			System.err.println("Something wrong in getting average number of draws");
 			e.printStackTrace();

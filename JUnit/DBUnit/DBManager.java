@@ -5,7 +5,7 @@ import java.sql.SQLException;
 
 public  class DBManager {
 	public static Connection getConnection() throws ClassNotFoundException,SQLException{
-		Class.forName("com.mysql.cj.jdbc.Driver");
-		return DriverManager.getConnection("jdbc:mysql://localhost:3306/localhost?useUnicode=true&nullCatalogMeansCurrent=true&characterEncoding=utf-8&useSSL=false", "root", "YYX97sheng");
+		Class.forName("org.postgresql.Driver");
+		return DriverManager.getConnection("jdbc:postgresql://52.24.215.108:5432/Lifeordeath?useUnicode=true&nullCatalogMeansCurrent=true&characterEncoding=utf-8&useSSL=false", "Lifeordeath", "Lifeordeath");
 	}
 }

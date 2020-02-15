@@ -11,49 +11,7 @@ public class RecordDAO {
 	//basic method: update, delete, insert query
 	//method to update 
 		private Record re = null;
-		public static void updateRecord(Record re) 
-				throws SQLException, ClassNotFoundException,ExecuteUpdateException{
-			Connection conn = null;
-			try {
-				conn = DBManager.getConnection();
-				
-				PreparedStatement pst = conn.prepareStatement("UPDATE record SET numberOfMembers=?,numberOfDraws=?,winner=?,rounds=?,scoreOfPlayerYou=?,scoreOfPlayerAI1=?,scoreOfPlayerAI2=?,scoreOfPlayerAI3=?,scoreOfPlayerAI4=? WHERE times=?");
-				pst.setInt(1,re.getNumberOfMembers());
-				pst.setInt(2,re.getNumberOfDraws());
-				pst.setString(3,re.getWinner());
-				pst.setInt(4,re.getRounds());
-				pst.setInt(5,re.getScoreOfPlayerYou());
-				pst.setInt(6,re.getScoreOfPlayerAI1());
-				pst.setInt(7,re.getScoreOfPlayerAI2());
-				pst.setInt(8,re.getScoreOfPlayerAI3());
-				pst.setInt(9,re.getScoreOfPlayerAI4());
-				pst.setInt(10,re.getTimes());
-				
-				if(pst.executeUpdate()<=0) {
-					throw new ExecuteUpdateException();
-				}
-			}finally {
-				conn.close();
-			}
-		}
-		
-		//method to delete
-		public static void deleteRecord(int times) 
-				throws SQLException, ClassNotFoundException,ExecuteDeleteException, NotFoundDataException{
-			Connection conn = null;
-			try {
-				conn = DBManager.getConnection();
-				
-				PreparedStatement pst = conn.prepareStatement("DELETE FROM record WHERE times=?");
-				pst.setInt(1,times);
-				
-				if(pst.executeUpdate()<=0) {
-					throw new NotFoundDataException();
-				}
-			}finally {
-				conn.close();
-			}
-		}
+
 		
 		//method to insert
 		public static void insertRecord(Record re) 

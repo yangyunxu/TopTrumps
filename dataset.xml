@@ -1,33 +1,9 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <dataset>
-  <advisor ADVID="1" ADVNAME="McReader"/>
-  <advisor ADVID="2" ADVNAME="Burn"/>
-  <advisor ADVID="3" ADVNAME="Edward"/>
-  <city HCID="BD" HCNAME="Bradford"/>
-  <city HCID="GL" HCNAME="Glasgow"/>
-  <city HCID="MU" HCNAME="Munich"/>
-  <city HCID="RM" HCNAME="Rome"/>
-  <employee SSN="1" FName="Philip" Salary="30000"/>
-  <employee SSN="1" FName="Philip" Salary="30000"/>
-  <employee SSN="2" FName="Stella" Salary="40000"/>
-  <employee SSN="2" FName="Stella" Salary="40000"/>
-  <employee SSN="3" FName="Lona" Salary="50000"/>
-  <employee SSN="1" FName="Philip" Salary="30000"/>
-  <newemployee SSN="1" FName="Philip" Salary="30000"/>
-  <newemployee SSN="2" FName="Stella" Salary="40000"/>
-  <newemployee SSN="3" FName="Yang" Salary="50000"/>
-  <newemployee SSN="4" FName="Qiu" Salary="40000"/>
-  <newemployee SSN="5" FName="Sun" Salary="30000"/>
-  <newemployee SSN="6" FName="Hu" Salary="60000"/>
-  <newemployee SSN="7" FName="Cai" Salary="80000"/>
-  <newemployee SSN="8" FName="Tian" Salary="30000"/>
-  <newemployee SSN="9" FName="Jin" Salary="70000"/>
-  <newemployee SSN="10" FName="Yuan" Salary="70000"/>
-  <newemployee SSN="11" FName="Zhang" Salary="80000"/>
-  <project/>
-  <record Times="2" NumberOfMembers="4" NumberOfDraws="57" Winner="PlayerAI!" Rounds="489" ScoreOfPlayerYou="12" ScoreOfPlayerAI1="4" ScoreOfPlayerAI2="5" ScoreOfPlayerAI3="4" ScoreOfPlayerAI4="4"/>
-  <student/>
-  <teacher/>
-  <team/>
-  <topic/>
+  <record times="1" numberofmembers="5" numberofdraws="6" winner="PlayerAI1" rounds="8" coreofplayeryou="0" scoreofplayerai1="2" scoreofplayerai2="0" scoreofplayerai3="0" scoreofplayerai4="0"/>
+  <record times="2" numberofmembers="5" numberofdraws="2" winner="PlayerAI4" rounds="22" coreofplayeryou="4" scoreofplayerai1="0" scoreofplayerai2="0" scoreofplayerai3="0" scoreofplayerai4="16"/>
+  <record times="3" numberofmembers="5" numberofdraws="13" winner="PlayerAI1" rounds="97" coreofplayeryou="1" scoreofplayerai1="49" scoreofplayerai2="3" scoreofplayerai3="0" scoreofplayerai4="31"/>
+  <record times="4" numberofmembers="5" numberofdraws="7" winner="PlayerAI4" rounds="36" coreofplayeryou="0" scoreofplayerai1="4" scoreofplayerai2="0" scoreofplayerai3="4" scoreofplayerai4="21"/>
+  <record times="5" numberofmembers="5" numberofdraws="5" winner="PlayerAI4" rounds="18" coreofplayeryou="1" scoreofplayerai1="0" scoreofplayerai2="0" scoreofplayerai3="2" scoreofplayerai4="10"/>
+  <record times="6" numberofmembers="5" numberofdraws="1" winner="PlayerAI1" rounds="25" coreofplayeryou="4" scoreofplayerai1="20" scoreofplayerai2="0" scoreofplayerai3="0" scoreofplayerai4="0"/>
 </dataset>

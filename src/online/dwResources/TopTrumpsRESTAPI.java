@@ -1,27 +1,21 @@
 package online.dwResources;
 
+import basic.Card;
+import basic.CommunalPile;
+import basic.Database;
+import basic.Player;
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.databind.ObjectWriter;
+import online.configuration.TopTrumpsJSONConfiguration;
+
+import javax.ws.rs.*;
+import javax.ws.rs.core.MediaType;
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.*;
-
-import javax.ws.rs.Consumes;
-import javax.ws.rs.GET;
-import javax.ws.rs.Path;
-import javax.ws.rs.Produces;
-import javax.ws.rs.QueryParam;
-import javax.ws.rs.core.MediaType;
-
-import basic.*;
-import com.fasterxml.jackson.core.JsonProcessingException;
-import com.sun.org.apache.bcel.internal.generic.ARRAYLENGTH;
-import com.sun.org.apache.bcel.internal.generic.LSHL;
-import javafx.beans.binding.ObjectExpression;
-import online.configuration.TopTrumpsJSONConfiguration;
-
-import com.fasterxml.jackson.databind.ObjectMapper;
-import com.fasterxml.jackson.databind.ObjectWriter;
 
 @Path("/toptrumps") // Resources specified here should be hosted at http://localhost:7777/toptrumps
 @Produces(MediaType.APPLICATION_JSON) // This resource returns JSON content
