@@ -104,7 +104,7 @@
 			"continue":true,
 			"drew":false
 		}
-		var userName = "imuser";
+		var userName = "You";
 		var playerNum = location.search.split("=")[1];
 		</script>
 	

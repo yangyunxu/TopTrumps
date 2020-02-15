@@ -48,7 +48,7 @@ $("#show").on("click",function(){
 	data.continue = winner[2];
 	data.drew = winner[0];
 	if (data.drew) {
-		$(".status h1").html("Round "+data.round+" : This round is a drew ");
+		$(".status h1").html("Round "+data.round+" : This round is a draw ");
 	}else{
 		$(".status h1").html("Round "+data.round+" : Player "+data.winner+" won this round ");
 	}
