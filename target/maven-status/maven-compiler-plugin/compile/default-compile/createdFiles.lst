@@ -1,0 +1,16 @@
+basic\Database.class
+online\dwResources\TopTrumpsRESTAPI.class
+online\TopTrumpsOnlineApplication.class
+basic\Card.class
+online\dwViews\GameScreenView.class
+commandline\WriteTestLog.class
+commandline\TopTrumpsCLIApplication.class
+online\dwViews\SelectionScreenView.class
+TopTrumps.class
+basic\Game.class
+basic\CommunalPile.class
+online\configuration\TopTrumpsJSONConfiguration.class
+online\dwResources\GameWebPagesResource.class
+basic\Model.class
+online\dwViews\StatisticsView.class
+basic\Player.class

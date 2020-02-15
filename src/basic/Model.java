@@ -2,6 +2,8 @@ package basic;
 
 import java.io.*;
 import java.util.*;
+import java.util.logging.ConsoleHandler;
+import java.util.logging.Level;
 import java.util.logging.Logger;
 
 public class Model {
@@ -49,6 +51,9 @@ public class Model {
         copy_players = new ArrayList<>(players);
         printLost = false;
         mylogger = Logger.getLogger("toplog");
+        ConsoleHandler consoleHandler = new ConsoleHandler();
+        consoleHandler.setLevel(Level.FINEST);
+        mylogger.addHandler(consoleHandler);
     }
 
     //distribute cards to players randomly

@@ -7,6 +7,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Scanner;
+import java.util.logging.ConsoleHandler;
 import java.util.logging.FileHandler;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -53,12 +54,15 @@ public class TopTrumpsCLIApplication {
 
         Logger mylogger = Logger.getLogger("toplog");
         FileHandler fileHandler = new FileHandler("toptrumps.log");
+        ConsoleHandler consoleHandler = new ConsoleHandler();
+        consoleHandler.setLevel(Level.FINEST);
         if(writeGameLogsToFile){
             fileHandler.setLevel(Level.INFO);
         }else {
             fileHandler.setLevel(Level.OFF);
         }
         mylogger.addHandler(fileHandler);
+        mylogger.addHandler(consoleHandler);
 
         // Loop until the user wants to exit the game
         while (!userWantsToQuit) {
