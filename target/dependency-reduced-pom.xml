@@ -13,6 +13,7 @@
         <directory>resources</directory>
       </resource>
     </resources>
+    <finalName>TopTrumps</finalName>
     <pluginManagement>
       <plugins>
         <plugin>

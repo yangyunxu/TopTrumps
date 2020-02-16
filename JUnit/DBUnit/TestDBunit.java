@@ -56,7 +56,7 @@ public class TestDBunit {
 	public void testRecordInsert() 
 			throws ClassNotFoundException, SQLException, ExecuteInsertException, ExecuteQueryException, NotFoundDataException{
 		Record re = new Record();
-		re.setTimes(51);
+		re.setTimes(9998);
 		re.setNumberOfMember(5);
 		re.setNumberOfDraws(40);
 		re.setWinner("PlayerYou");
@@ -68,7 +68,7 @@ public class TestDBunit {
 		re.setScoreOfPlayerAI4(10);
 		
 		RecordDAO.insertRecord(re);
-		Record recordTwo = RecordDAO.queryRecord(51);
+		Record recordTwo = RecordDAO.queryRecord(9998);
 		assertNotNull(recordTwo);
 		assertEquals(re.getTimes(), recordTwo.getTimes());
 		assertEquals(re.getNumberOfMembers(), recordTwo.getNumberOfMembers());

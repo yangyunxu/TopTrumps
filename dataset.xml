@@ -1,9 +1,4 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <dataset>
-  <record times="1" numberofmembers="5" numberofdraws="6" winner="PlayerAI1" rounds="8" coreofplayeryou="0" scoreofplayerai1="2" scoreofplayerai2="0" scoreofplayerai3="0" scoreofplayerai4="0"/>
-  <record times="2" numberofmembers="5" numberofdraws="2" winner="PlayerAI4" rounds="22" coreofplayeryou="4" scoreofplayerai1="0" scoreofplayerai2="0" scoreofplayerai3="0" scoreofplayerai4="16"/>
-  <record times="3" numberofmembers="5" numberofdraws="13" winner="PlayerAI1" rounds="97" coreofplayeryou="1" scoreofplayerai1="49" scoreofplayerai2="3" scoreofplayerai3="0" scoreofplayerai4="31"/>
-  <record times="4" numberofmembers="5" numberofdraws="7" winner="PlayerAI4" rounds="36" coreofplayeryou="0" scoreofplayerai1="4" scoreofplayerai2="0" scoreofplayerai3="4" scoreofplayerai4="21"/>
-  <record times="5" numberofmembers="5" numberofdraws="5" winner="PlayerAI4" rounds="18" coreofplayeryou="1" scoreofplayerai1="0" scoreofplayerai2="0" scoreofplayerai3="2" scoreofplayerai4="10"/>
-  <record times="6" numberofmembers="5" numberofdraws="1" winner="PlayerAI1" rounds="25" coreofplayeryou="4" scoreofplayerai1="20" scoreofplayerai2="0" scoreofplayerai3="0" scoreofplayerai4="0"/>
+  <record/>
 </dataset>

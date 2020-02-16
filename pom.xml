@@ -21,8 +21,23 @@
         <groupId>io.dropwizard</groupId>
         <artifactId>dropwizard-core</artifactId>
         <version>${dropwizard.version}</version>
+		<exclusions>
+			<exclusion>
+				<groupId>org.slf4j</groupId>
+				<artifactId>*</artifactId>
+			</exclusion>
+			<exclusion>
+				<groupId>org.slf4j</groupId>
+				<artifactId>slf4j-api</artifactId>
+			</exclusion>
+		</exclusions>
     </dependency>
-    
+
+	  <dependency>
+		  <groupId>log4j</groupId>
+		  <artifactId>log4j</artifactId>
+		  <version>1.2.17</version>
+	  </dependency>
     <!-- When hosting a website with dropwizard, we need to specify a language for writing views,
          In this case, we are using freemarker https://freemarker.apache.org/ -->
 	<dependency>
@@ -30,6 +45,7 @@
     	<artifactId>dropwizard-views-freemarker</artifactId>
     	<version>${dropwizard.version}</version>
 	</dependency>
+
 	
 	<!-- One of the requirements is to save results in a (mysql) database, so lets import the
 	     database connection driver libruary for that as well -->
@@ -44,12 +60,6 @@
 		<artifactId>dropwizard-assets</artifactId>
 		<version>${dropwizard.version}</version>
 	</dependency>
-
-	  <dependency>
-		  <groupId>junit</groupId>
-		  <artifactId>junit</artifactId>
-		  <version>4.13</version>
-	  </dependency>
 
 	  <dependency>
 		  <groupId>org.dbunit</groupId>
@@ -75,11 +85,12 @@
 		  <version>4.12.1</version>
 		  <scope>test</scope>
 	  </dependency>
-    
+
+
   </dependencies>
   
   <build>
-  
+  <finalName>TopTrumps</finalName>
   	<!-- Where do our Java sources come from? -->
     <sourceDirectory>src</sourceDirectory>
 	

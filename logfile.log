@@ -1,0 +1,72 @@
+2020-02-16 23:25:22  [ main:0 ] - [ INFO ]  The game 3 begins:
+2020-02-16 23:25:22  [ main:0 ] - [ INFO ]  ----------------------------------
+2020-02-16 23:25:22  [ main:0 ] - [ INFO ]  The contents of the complete deck has been read
+2020-02-16 23:25:22  [ main:0 ] - [ INFO ]  350r Avenger Carrack Constellation Hawk Hornet Hurricane Idris m50 Merchantman Orion Sabre Vanguard 350r Avenger Carrack Constellation Hawk Hornet Hurricane Idris m50 Merchantman Orion Sabre Vanguard 350r Avenger Carrack Constellation Hawk Hornet Hurricane Idris m50 Merchantman Orion Sabre Vanguard Avenger 
+2020-02-16 23:25:22  [ main:0 ] - [ INFO ]  ----------------------------------
+2020-02-16 23:25:22  [ main:0 ] - [ INFO ]  The contents of the complete deck has been shuffled
+2020-02-16 23:25:22  [ main:0 ] - [ INFO ]  Hurricane Hornet m50 Vanguard m50 Sabre 350r Sabre Vanguard Idris Carrack 350r m50 Avenger Avenger Hornet Idris Vanguard Orion Constellation 350r Hawk Merchantman Hurricane Hawk Carrack Orion Constellation Hurricane Hornet Constellation Avenger Merchantman Merchantman Hawk Avenger Idris Carrack Sabre Orion 
+2020-02-16 23:25:22  [ main:0 ] - [ INFO ]  ----------------------------------
+2020-02-16 23:25:22  [ main:0 ] - [ INFO ]  You: Hurricane Sabre Carrack Hornet 350r Carrack Constellation Avenger 
+2020-02-16 23:25:22  [ main:0 ] - [ INFO ]  AI Player 1: Hornet 350r 350r Idris Hawk Orion Avenger Idris 
+2020-02-16 23:25:22  [ main:0 ] - [ INFO ]  AI Player 2: m50 Sabre m50 Vanguard Merchantman Constellation Merchantman Carrack 
+2020-02-16 23:25:22  [ main:0 ] - [ INFO ]  AI Player 3: Vanguard Vanguard Avenger Orion Hurricane Hurricane Merchantman Sabre 
+2020-02-16 23:25:22  [ main:0 ] - [ INFO ]  AI Player 4: m50 Idris Avenger Constellation Hawk Hornet Hawk Orion 
+2020-02-16 23:25:22  [ main:0 ] - [ INFO ]  ----------------------------------
+2020-02-16 23:25:22  [ main:0 ] - [ INFO ]  Hurricane Hornet m50 Vanguard m50 
+2020-02-16 23:25:22  [ main:0 ] - [ INFO ]  ----------------------------------
+2020-02-16 23:25:22  [ main:0 ] - [ INFO ]  The communalPile add 5 cards, together 5 cards
+2020-02-16 23:25:22  [ main:0 ] - [ INFO ]  ----------------------------------
+2020-02-16 23:25:22  [ main:0 ] - [ INFO ]  You: Sabre Carrack Hornet 350r Carrack Constellation Avenger 
+2020-02-16 23:25:22  [ main:0 ] - [ INFO ]  AI Player 1: 350r 350r Idris Hawk Orion Avenger Idris 
+2020-02-16 23:25:22  [ main:0 ] - [ INFO ]  AI Player 2: Sabre m50 Vanguard Merchantman Constellation Merchantman Carrack 
+2020-02-16 23:25:22  [ main:0 ] - [ INFO ]  AI Player 3: Vanguard Avenger Orion Hurricane Hurricane Merchantman Sabre 
+2020-02-16 23:25:22  [ main:0 ] - [ INFO ]  AI Player 4: Idris Avenger Constellation Hawk Hornet Hawk Orion 
+2020-02-16 23:25:22  [ main:0 ] - [ INFO ]  ----------------------------------
+2020-02-16 23:25:22  [ main:16 ] - [ INFO ]  Sabre 350r Sabre Vanguard Idris 
+2020-02-16 23:25:22  [ main:16 ] - [ INFO ]  ----------------------------------
+2020-02-16 23:25:22  [ main:16 ] - [ INFO ]  The communalPile remove 0 cards, and left 0 cards
+2020-02-16 23:25:22  [ main:16 ] - [ INFO ]  ----------------------------------
+2020-02-16 23:25:22  [ main:16 ] - [ INFO ]  You: Carrack Hornet 350r Carrack Constellation Avenger 
+2020-02-16 23:25:22  [ main:16 ] - [ INFO ]  AI Player 1: 350r Idris Hawk Orion Avenger Idris Sabre 350r Sabre Vanguard Idris Vanguard Hornet m50 m50 Hurricane 
+2020-02-16 23:25:22  [ main:16 ] - [ INFO ]  AI Player 2: m50 Vanguard Merchantman Constellation Merchantman Carrack 
+2020-02-16 23:25:22  [ main:16 ] - [ INFO ]  AI Player 3: Avenger Orion Hurricane Hurricane Merchantman Sabre 
+2020-02-16 23:25:22  [ main:16 ] - [ INFO ]  AI Player 4: Avenger Constellation Hawk Hornet Hawk Orion 
+2020-02-16 23:25:22  [ main:16 ] - [ INFO ]  ----------------------------------
+2020-02-16 23:25:22  [ main:16 ] - [ INFO ]  Carrack 350r m50 Avenger Avenger 
+2020-02-16 23:25:22  [ main:16 ] - [ INFO ]  ----------------------------------
+2020-02-16 23:25:22  [ main:16 ] - [ INFO ]  You: Hornet 350r Carrack Constellation Avenger 
+2020-02-16 23:25:22  [ main:16 ] - [ INFO ]  AI Player 1: Idris Hawk Orion Avenger Idris Sabre 350r Sabre Vanguard Idris Vanguard Hornet m50 m50 Hurricane 
+2020-02-16 23:25:22  [ main:16 ] - [ INFO ]  AI Player 2: Vanguard Merchantman Constellation Merchantman Carrack Carrack 350r m50 Avenger Avenger 
+2020-02-16 23:25:22  [ main:16 ] - [ INFO ]  AI Player 3: Orion Hurricane Hurricane Merchantman Sabre 
+2020-02-16 23:25:22  [ main:16 ] - [ INFO ]  AI Player 4: Constellation Hawk Hornet Hawk Orion 
+2020-02-16 23:25:22  [ main:16 ] - [ INFO ]  ----------------------------------
+2020-02-16 23:25:22  [ main:16 ] - [ INFO ]  Hornet Idris Vanguard Orion Constellation 
+2020-02-16 23:25:22  [ main:16 ] - [ INFO ]  ----------------------------------
+2020-02-16 23:25:22  [ main:16 ] - [ INFO ]  The communalPile add 5 cards, together 5 cards
+2020-02-16 23:25:22  [ main:16 ] - [ INFO ]  ----------------------------------
+2020-02-16 23:25:22  [ main:16 ] - [ INFO ]  You: 350r Carrack Constellation Avenger 
+2020-02-16 23:25:22  [ main:16 ] - [ INFO ]  AI Player 1: Hawk Orion Avenger Idris Sabre 350r Sabre Vanguard Idris Vanguard Hornet m50 m50 Hurricane 
+2020-02-16 23:25:22  [ main:16 ] - [ INFO ]  AI Player 2: Merchantman Constellation Merchantman Carrack Carrack 350r m50 Avenger Avenger 
+2020-02-16 23:25:22  [ main:16 ] - [ INFO ]  AI Player 3: Hurricane Hurricane Merchantman Sabre 
+2020-02-16 23:25:22  [ main:16 ] - [ INFO ]  AI Player 4: Hawk Hornet Hawk Orion 
+2020-02-16 23:25:22  [ main:16 ] - [ INFO ]  ----------------------------------
+2020-02-16 23:25:22  [ main:16 ] - [ INFO ]  350r Hawk Merchantman Hurricane Hawk 
+2020-02-16 23:25:22  [ main:16 ] - [ INFO ]  ----------------------------------
+2020-02-16 23:25:22  [ main:16 ] - [ INFO ]  The communalPile remove 0 cards, and left 0 cards
+2020-02-16 23:25:22  [ main:16 ] - [ INFO ]  ----------------------------------
+2020-02-16 23:25:22  [ main:16 ] - [ INFO ]  You: Carrack Constellation Avenger 
+2020-02-16 23:25:22  [ main:16 ] - [ INFO ]  AI Player 1: Orion Avenger Idris Sabre 350r Sabre Vanguard Idris Vanguard Hornet m50 m50 Hurricane 
+2020-02-16 23:25:22  [ main:16 ] - [ INFO ]  AI Player 2: Constellation Merchantman Carrack Carrack 350r m50 Avenger Avenger 350r Hawk Merchantman Hurricane Hawk Hornet Idris Vanguard Constellation Orion 
+2020-02-16 23:25:22  [ main:16 ] - [ INFO ]  AI Player 3: Hurricane Merchantman Sabre 
+2020-02-16 23:25:22  [ main:16 ] - [ INFO ]  AI Player 4: Hornet Hawk Orion 
+2020-02-16 23:25:22  [ main:16 ] - [ INFO ]  ----------------------------------
+2020-02-16 23:25:22  [ main:16 ] - [ INFO ]  Carrack Orion Constellation Hurricane Hornet 
+2020-02-16 23:25:22  [ main:16 ] - [ INFO ]  ----------------------------------
+2020-02-16 23:25:22  [ main:16 ] - [ INFO ]  You: Constellation Avenger Carrack Orion Constellation Hurricane Hornet 
+2020-02-16 23:25:22  [ main:16 ] - [ INFO ]  AI Player 1: Avenger Idris Sabre 350r Sabre Vanguard Idris Vanguard Hornet m50 m50 Hurricane 
+2020-02-16 23:25:22  [ main:16 ] - [ INFO ]  AI Player 2: Merchantman Carrack Carrack 350r m50 Avenger Avenger 350r Hawk Merchantman Hurricane Hawk Hornet Idris Vanguard Constellation Orion 
+2020-02-16 23:25:22  [ main:16 ] - [ INFO ]  AI Player 3: Merchantman Sabre 
+2020-02-16 23:25:22  [ main:16 ] - [ INFO ]  AI Player 4: Hawk Orion 
+2020-02-16 23:25:22  [ main:16 ] - [ INFO ]  ----------------------------------
+2020-02-16 23:25:22  [ main:16 ] - [ INFO ]  Constellation Avenger Merchantman Merchantman Hawk 
+2020-02-16 23:25:22  [ main:16 ] - [ INFO ]  ----------------------------------

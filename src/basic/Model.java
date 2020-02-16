@@ -1,10 +1,13 @@
 package basic;
 
+import commandline.TopTrumpsCLIApplication;
+
 import java.io.*;
 import java.util.*;
-import java.util.logging.ConsoleHandler;
-import java.util.logging.Level;
-import java.util.logging.Logger;
+//import java.util.logging.ConsoleHandler;
+//import java.util.logging.Level;
+//import java.util.logging.Logger;
+import org.apache.log4j.Logger;
 
 public class Model {
 
@@ -20,8 +23,9 @@ public class Model {
     private boolean Draw, printLost;
     private int numberOfDraws;
     private int[] scoreOfPlayers;
-    private Logger mylogger;
+//    private Logger mylogger;
     private String info;
+    private Logger mylogger = Logger.getLogger(Model.class);
 
 
     /*
@@ -50,10 +54,7 @@ public class Model {
         scoreOfPlayers = new int[]{0, 0, 0, 0, 0};
         copy_players = new ArrayList<>(players);
         printLost = false;
-        mylogger = Logger.getLogger("toplog");
-        ConsoleHandler consoleHandler = new ConsoleHandler();
-        consoleHandler.setLevel(Level.FINEST);
-        mylogger.addHandler(consoleHandler);
+//        mylogger = Logger.getLogger("toplog");
     }
 
     //distribute cards to players randomly
