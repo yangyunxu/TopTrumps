@@ -7,16 +7,16 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Scanner;
+
+import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
-//import java.util.logging.ConsoleHandler;
-//import java.util.logging.FileHandler;
-//import java.util.logging.Level;
-//import java.util.logging.Logger;
+
 
 /**
  * Top Trumps command line application
  */
 public class TopTrumpsCLIApplication {
+    //write test log
     private static Logger mylogger = Logger.getLogger(TopTrumpsCLIApplication.class);
     /**
      * This main method is called by TopTrumps.java when the user specifies that they want to run in
@@ -26,6 +26,8 @@ public class TopTrumpsCLIApplication {
      */
     private static int numberOfGames;//number of games
     private static int numberOfMembers;
+
+    private static boolean writeGameLogsToFile = false;
 
     public static void main(String[] args) throws IOException {
 
@@ -43,30 +45,22 @@ public class TopTrumpsCLIApplication {
         Scanner scanner = new Scanner(System.in);
 
 
-        boolean writeGameLogsToFile = false; // Should we write game logs to file?
+        //writeGameLogsToFile = false; // Should we write game logs to file?
+
+
         if (args[0].equalsIgnoreCase("true")) writeGameLogsToFile = true; // Command line selection
 
+        if(!writeGameLogsToFile){
+            mylogger.setLevel(Level.OFF);
+        }
         // State
         boolean userWantsToQuit = false; // flag to check whether the user wants to quit the application
 
-        WriteTestLog log = new WriteTestLog();//write test log
+        WriteTestLog log = new WriteTestLog();//write output file
         log.writeString("--------------------\n" +
                 "--- Top Trumps   ---\n" +
                 "--------------------\n");
 
-
-
-//        Logger mylogger = Logger.getLogger("toplog");
-//        FileHandler fileHandler = new FileHandler("toptrumps.log");
-//        ConsoleHandler consoleHandler = new ConsoleHandler();
-//        consoleHandler.setLevel(Level.FINEST);
-//        if(writeGameLogsToFile){
-//            fileHandler.setLevel(Level.INFO);
-//        }else {
-//            fileHandler.setLevel(Level.OFF);
-//        }
-//        mylogger.addHandler(fileHandler);
-//        mylogger.addHandler(consoleHandler);
 
         // Loop until the user wants to exit the game
         while (!userWantsToQuit) {
@@ -195,4 +189,7 @@ public class TopTrumpsCLIApplication {
     }
 
 
+    public static boolean getTestFlag(){
+        return writeGameLogsToFile;
+    }
 }

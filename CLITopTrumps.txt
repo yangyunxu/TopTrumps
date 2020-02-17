@@ -11,14 +11,14 @@ Enter the number for your selection: 2
 Game Start
 Round 1
 Round 1: Players have drawn their cards
-You drew 'Orion':
-   > size: 10
-   > speed: 1
-   > range: 6
-   > firepower: 2
-   > cargo: 9
+You drew 'Idris':
+   > size: 8
+   > speed: 2
+   > range: 7
+   > firepower: 10
+   > cargo: 6
 There are '7 cards in your deck
-Round 1: This round was a Draw, common pile now has 5 cards
+Round 1: Player AI Player 2 won this round
 The winning card was 'Orion':
    > size: 10 <--
    > speed: 1
@@ -29,68 +29,68 @@ The winning card was 'Orion':
 
 Round 2
 Round 2: Players have drawn their cards
+You drew 'Sabre':
+   > size: 2
+   > speed: 7
+   > range: 2
+   > firepower: 5
+   > cargo: 0
+There are '6 cards in your deck
+Round 2: Player AI Player 3 won this round
+The winning card was 'm50':
+   > size: 1
+   > speed: 10 <--
+   > range: 2
+   > firepower: 2
+   > cargo: 0
+
+
+Round 3
+Round 3: Players have drawn their cards
 You drew 'Carrack':
    > size: 6
    > speed: 2
    > range: 10
    > firepower: 4
    > cargo: 6
-There are '6 cards in your deck
-Round 2: This round was a Draw, common pile now has 10 cards
-The winning card was 'Avenger':
+There are '5 cards in your deck
+Round 3: Player AI Player 3 won this round
+The winning card was 'Idris':
+   > size: 8
+   > speed: 2
+   > range: 7
+   > firepower: 10 <--
+   > cargo: 6
+
+
+Round 4
+Round 4: Players have drawn their cards
+You drew 'Hornet':
    > size: 2
-   > speed: 5 <--
-   > range: 4
-   > firepower: 3
-   > cargo: 2
+   > speed: 5
+   > range: 3
+   > firepower: 4
+   > cargo: 1
+There are '4 cards in your deck
+Round 4: Player AI Player 3 won this round
+The winning card was 'Merchantman':
+   > size: 7
+   > speed: 3
+   > range: 5
+   > firepower: 6
+   > cargo: 8 <--
 
 
-Round 3
-Round 3: Players have drawn their cards
+Round 5
+Round 5: Players have drawn their cards
 You drew 'Merchantman':
    > size: 7
    > speed: 3
    > range: 5
    > firepower: 6
    > cargo: 8
-There are '5 cards in your deck
-Round 3: Player AI Player 3 won this round
-The winning card was 'Hornet':
-   > size: 2
-   > speed: 5 <--
-   > range: 3
-   > firepower: 4
-   > cargo: 1
-
-
-Round 4
-Round 4: Players have drawn their cards
-You drew '350r':
-   > size: 1
-   > speed: 9
-   > range: 2
-   > firepower: 3
-   > cargo: 0
-There are '4 cards in your deck
-Round 4: Player AI Player 4 won this round
-The winning card was 'Carrack':
-   > size: 6
-   > speed: 2
-   > range: 10 <--
-   > firepower: 4
-   > cargo: 6
-
-
-Round 5
-Round 5: Players have drawn their cards
-You drew 'Avenger':
-   > size: 2
-   > speed: 5
-   > range: 4
-   > firepower: 3
-   > cargo: 2
 There are '3 cards in your deck
-Round 5: Player AI Player 4 won this round
+Round 5: Player AI Player 2 won this round
 The winning card was 'm50':
    > size: 1
    > speed: 10 <--
@@ -101,719 +101,154 @@ The winning card was 'm50':
 
 Round 6
 Round 6: Players have drawn their cards
-You drew 'Hurricane':
-   > size: 2
-   > speed: 5
-   > range: 3
-   > firepower: 5
+You drew '350r':
+   > size: 1
+   > speed: 9
+   > range: 2
+   > firepower: 3
    > cargo: 0
 There are '2 cards in your deck
-Round 6: Player AI Player 4 won this round
-The winning card was 'Idris':
-   > size: 8
-   > speed: 2
-   > range: 7
-   > firepower: 10 <--
-   > cargo: 6
+Round 6: This round was a Draw, common pile now has 5 cards
+The winning card was 'Orion':
+   > size: 10 <--
+   > speed: 1
+   > range: 6
+   > firepower: 2
+   > cargo: 9
 
 
 Round 7
 Round 7: Players have drawn their cards
+You drew 'Sabre':
+   > size: 2
+   > speed: 7
+   > range: 2
+   > firepower: 5
+   > cargo: 0
+There are '1 cards in your deck
+Round 7: Player You won this round
+The winning card was 'Sabre':
+   > size: 2
+   > speed: 7 <--
+   > range: 2
+   > firepower: 5
+   > cargo: 0
+
+
+Round 8
+Round 8: Players have drawn their cards
 You drew 'Vanguard':
    > size: 3
    > speed: 4
    > range: 5
    > firepower: 5
    > cargo: 2
-There are '1 cards in your deck
-Round 7: Player AI Player 1 won this round
-The winning card was 'm50':
-   > size: 1
-   > speed: 10 <--
-   > range: 2
-   > firepower: 2
-   > cargo: 0
-
-
-Round 8
-Round 8: Players have drawn their cards
+There are '10 cards in your deck
+It is your turn to select a category, the categories are:
+   1: size
+   2: speed
+   3: range
+   4: firepower
+   5: cargo
+Enter the number for your attribute: 1
 Round 8: Player AI Player 3 won this round
 The winning card was 'Idris':
-   > size: 8
+   > size: 8 <--
    > speed: 2
    > range: 7
-   > firepower: 10 <--
+   > firepower: 10
    > cargo: 6
 
 
 Round 9
 Round 9: Players have drawn their cards
-Round 9: Player AI Player 3 won this round
-The winning card was 'Merchantman':
-   > size: 7
-   > speed: 3
-   > range: 5
-   > firepower: 6
-   > cargo: 8 <--
+You drew 'Sabre':
+   > size: 2
+   > speed: 7
+   > range: 2
+   > firepower: 5
+   > cargo: 0
+There are '9 cards in your deck
+Round 9: This round was a Draw, common pile now has 3 cards
+The winning card was 'Sabre':
+   > size: 2
+   > speed: 7 <--
+   > range: 2
+   > firepower: 5
+   > cargo: 0
 
 
 Round 10
 Round 10: Players have drawn their cards
-Round 10: Player AI Player 3 won this round
-The winning card was 'Carrack':
+You drew 'Carrack':
    > size: 6
    > speed: 2
-   > range: 10 <--
+   > range: 10
    > firepower: 4
    > cargo: 6
-
-
-Round 11
-Round 11: Players have drawn their cards
-Round 11: Player AI Player 3 won this round
-The winning card was 'Vanguard':
-   > size: 3
-   > speed: 4
-   > range: 5 <--
-   > firepower: 5
-   > cargo: 2
-
-
-Round 12
-Round 12: Players have drawn their cards
-Round 12: Player AI Player 1 won this round
+There are '8 cards in your deck
+Round 10: Player AI Player 2 won this round
 The winning card was '350r':
    > size: 1
    > speed: 9 <--
    > range: 2
    > firepower: 3
+   > cargo: 0
+
+
+Round 11
+Round 11: Players have drawn their cards
+You drew 'Avenger':
+   > size: 2
+   > speed: 5
+   > range: 4
+   > firepower: 3
+   > cargo: 2
+There are '7 cards in your deck
+Round 11: Player AI Player 2 won this round
+The winning card was 'Orion':
+   > size: 10 <--
+   > speed: 1
+   > range: 6
+   > firepower: 2
+   > cargo: 9
+
+
+Round 12
+Round 12: Players have drawn their cards
+You drew 'Constellation':
+   > size: 4
+   > speed: 5
+   > range: 7
+   > firepower: 3
+   > cargo: 4
+There are '6 cards in your deck
+Round 12: This round was a Draw, common pile now has 3 cards
+The winning card was 'm50':
+   > size: 1
+   > speed: 10 <--
+   > range: 2
+   > firepower: 2
    > cargo: 0
 
 
 Round 13
 Round 13: Players have drawn their cards
-Round 13: Player AI Player 1 won this round
-The winning card was 'Sabre':
-   > size: 2
-   > speed: 7 <--
-   > range: 2
-   > firepower: 5
-   > cargo: 0
+You drew 'Constellation':
+   > size: 4
+   > speed: 5
+   > range: 7
+   > firepower: 3
+   > cargo: 4
+There are '5 cards in your deck
+Round 13: Player You won this round
+The winning card was 'Constellation':
+   > size: 4
+   > speed: 5
+   > range: 7 <--
+   > firepower: 3
+   > cargo: 4
 
 
 Round 14
 Round 14: Players have drawn their cards
-Round 14: Player AI Player 1 won this round
-The winning card was '350r':
-   > size: 1
-   > speed: 9 <--
-   > range: 2
-   > firepower: 3
-   > cargo: 0
-
-
-Round 15
-Round 15: Players have drawn their cards
-Round 15: Player AI Player 1 won this round
-The winning card was 'Hornet':
-   > size: 2
-   > speed: 5 <--
-   > range: 3
-   > firepower: 4
-   > cargo: 1
-
-
-Round 16
-Round 16: Players have drawn their cards
-Round 16: Player AI Player 3 won this round
-The winning card was 'Carrack':
-   > size: 6
-   > speed: 2
-   > range: 10 <--
-   > firepower: 4
-   > cargo: 6
-
-
-Round 17
-Round 17: Players have drawn their cards
-Round 17: Player AI Player 1 won this round
-The winning card was 'Sabre':
-   > size: 2
-   > speed: 7 <--
-   > range: 2
-   > firepower: 5
-   > cargo: 0
-
-
-Round 18
-Round 18: Players have drawn their cards
-Round 18: Player AI Player 1 won this round
-The winning card was 'Merchantman':
-   > size: 7
-   > speed: 3
-   > range: 5
-   > firepower: 6
-   > cargo: 8 <--
-
-
-Round 19
-Round 19: Players have drawn their cards
-Round 19: Player AI Player 1 won this round
-The winning card was 'Carrack':
-   > size: 6
-   > speed: 2
-   > range: 10 <--
-   > firepower: 4
-   > cargo: 6
-
-
-Round 20
-Round 20: Players have drawn their cards
-Round 20: Player AI Player 1 won this round
-The winning card was '350r':
-   > size: 1
-   > speed: 9 <--
-   > range: 2
-   > firepower: 3
-   > cargo: 0
-
-
-Round 21
-Round 21: Players have drawn their cards
-Round 21: Player AI Player 4 won this round
-The winning card was '350r':
-   > size: 1
-   > speed: 9 <--
-   > range: 2
-   > firepower: 3
-   > cargo: 0
-
-
-Round 22
-Round 22: Players have drawn their cards
-Round 22: This round was a Draw, common pile now has 3 cards
-The winning card was 'Avenger':
-   > size: 2
-   > speed: 5 <--
-   > range: 4
-   > firepower: 3
-   > cargo: 2
-
-
-Round 23
-Round 23: Players have drawn their cards
-Round 23: This round was a Draw, common pile now has 6 cards
-The winning card was 'Idris':
-   > size: 8
-   > speed: 2
-   > range: 7
-   > firepower: 10 <--
-   > cargo: 6
-
-
-Round 24
-Round 24: Players have drawn their cards
-Round 24: Player AI Player 3 won this round
-The winning card was 'm50':
-   > size: 1
-   > speed: 10 <--
-   > range: 2
-   > firepower: 2
-   > cargo: 0
-
-
-Round 25
-Round 25: Players have drawn their cards
-Round 25: This round was a Draw, common pile now has 3 cards
-The winning card was 'Hawk':
-   > size: 1
-   > speed: 3
-   > range: 2
-   > firepower: 4 <--
-   > cargo: 0
-
-
-Round 26
-Round 26: Players have drawn their cards
-Round 26: Player AI Player 1 won this round
-The winning card was 'Sabre':
-   > size: 2
-   > speed: 7
-   > range: 2
-   > firepower: 5 <--
-   > cargo: 0
-
-
-Round 27
-Round 27: Players have drawn their cards
-Round 27: Player AI Player 1 won this round
-The winning card was 'Avenger':
-   > size: 2
-   > speed: 5 <--
-   > range: 4
-   > firepower: 3
-   > cargo: 2
-
-
-Round 28
-Round 28: Players have drawn their cards
-Round 28: Player AI Player 1 won this round
-The winning card was 'Orion':
-   > size: 10 <--
-   > speed: 1
-   > range: 6
-   > firepower: 2
-   > cargo: 9
-
-
-Round 29
-Round 29: Players have drawn their cards
-Round 29: Player AI Player 1 won this round
-The winning card was 'Merchantman':
-   > size: 7
-   > speed: 3
-   > range: 5
-   > firepower: 6
-   > cargo: 8 <--
-
-
-Round 30
-Round 30: Players have drawn their cards
-Round 30: Player AI Player 1 won this round
-The winning card was 'Avenger':
-   > size: 2
-   > speed: 5 <--
-   > range: 4
-   > firepower: 3
-   > cargo: 2
-
-
-Round 31
-Round 31: Players have drawn their cards
-Round 31: Player AI Player 1 won this round
-The winning card was 'm50':
-   > size: 1
-   > speed: 10 <--
-   > range: 2
-   > firepower: 2
-   > cargo: 0
-
-
-Round 32
-Round 32: Players have drawn their cards
-Round 32: Player AI Player 1 won this round
-The winning card was 'Carrack':
-   > size: 6
-   > speed: 2
-   > range: 10 <--
-   > firepower: 4
-   > cargo: 6
-
-
-Round 33
-Round 33: Players have drawn their cards
-Round 33: Player AI Player 1 won this round
-The winning card was 'Sabre':
-   > size: 2
-   > speed: 7 <--
-   > range: 2
-   > firepower: 5
-   > cargo: 0
-
-
-Round 34
-Round 34: Players have drawn their cards
-Round 34: Player AI Player 1 won this round
-The winning card was 'Hurricane':
-   > size: 2
-   > speed: 5 <--
-   > range: 3
-   > firepower: 5
-   > cargo: 0
-
-
-Round 35
-Round 35: Players have drawn their cards
-Round 35: Player AI Player 1 won this round
-The winning card was '350r':
-   > size: 1
-   > speed: 9 <--
-   > range: 2
-   > firepower: 3
-   > cargo: 0
-
-
-Round 36
-Round 36: Players have drawn their cards
-Round 36: Player AI Player 1 won this round
-The winning card was 'Orion':
-   > size: 10 <--
-   > speed: 1
-   > range: 6
-   > firepower: 2
-   > cargo: 9
-
-
-Round 37
-Round 37: Players have drawn their cards
-Round 37: Player AI Player 1 won this round
-The winning card was 'Constellation':
-   > size: 4
-   > speed: 5
-   > range: 7 <--
-   > firepower: 3
-   > cargo: 4
-
-
-Round 38
-Round 38: Players have drawn their cards
-Round 38: Player AI Player 1 won this round
-The winning card was 'Sabre':
-   > size: 2
-   > speed: 7 <--
-   > range: 2
-   > firepower: 5
-   > cargo: 0
-
-
-Round 39
-Round 39: Players have drawn their cards
-Round 39: This round was a Draw, common pile now has 2 cards
-The winning card was 'Hawk':
-   > size: 1
-   > speed: 3
-   > range: 2
-   > firepower: 4 <--
-   > cargo: 0
-
-
-Round 40
-Round 40: Players have drawn their cards
-Round 40: Player AI Player 1 won this round
-The winning card was '350r':
-   > size: 1
-   > speed: 9 <--
-   > range: 2
-   > firepower: 3
-   > cargo: 0
-
-
-Round 41
-Round 41: Players have drawn their cards
-Round 41: Player AI Player 1 won this round
-The winning card was 'Hawk':
-   > size: 1
-   > speed: 3
-   > range: 2
-   > firepower: 4 <--
-   > cargo: 0
-
-
-Round 42
-Round 42: Players have drawn their cards
-Round 42: Player AI Player 1 won this round
-The winning card was 'Constellation':
-   > size: 4
-   > speed: 5
-   > range: 7 <--
-   > firepower: 3
-   > cargo: 4
-
-
-Round 43
-Round 43: Players have drawn their cards
-Round 43: Player AI Player 3 won this round
-The winning card was 'Sabre':
-   > size: 2
-   > speed: 7
-   > range: 2
-   > firepower: 5 <--
-   > cargo: 0
-
-
-Round 44
-Round 44: Players have drawn their cards
-Round 44: Player AI Player 3 won this round
-The winning card was 'Idris':
-   > size: 8
-   > speed: 2
-   > range: 7
-   > firepower: 10 <--
-   > cargo: 6
-
-
-Round 45
-Round 45: Players have drawn their cards
-Round 45: Player AI Player 3 won this round
-The winning card was 'Avenger':
-   > size: 2
-   > speed: 5 <--
-   > range: 4
-   > firepower: 3
-   > cargo: 2
-
-
-Round 46
-Round 46: Players have drawn their cards
-Round 46: Player AI Player 3 won this round
-The winning card was 'Hornet':
-   > size: 2
-   > speed: 5 <--
-   > range: 3
-   > firepower: 4
-   > cargo: 1
-
-
-Round 47
-Round 47: Players have drawn their cards
-Round 47: This round was a Draw, common pile now has 2 cards
-The winning card was 'Avenger':
-   > size: 2
-   > speed: 5 <--
-   > range: 4
-   > firepower: 3
-   > cargo: 2
-
-
-Round 48
-Round 48: Players have drawn their cards
-Round 48: This round was a Draw, common pile now has 4 cards
-The winning card was 'Merchantman':
-   > size: 7
-   > speed: 3
-   > range: 5 <--
-   > firepower: 6
-   > cargo: 8
-
-
-Round 49
-Round 49: Players have drawn their cards
-Round 49: Player AI Player 3 won this round
-The winning card was 'Idris':
-   > size: 8
-   > speed: 2
-   > range: 7
-   > firepower: 10 <--
-   > cargo: 6
-
-
-Round 50
-Round 50: Players have drawn their cards
-Round 50: Player AI Player 3 won this round
-The winning card was 'Hawk':
-   > size: 1
-   > speed: 3
-   > range: 2
-   > firepower: 4 <--
-   > cargo: 0
-
-
-Round 51
-Round 51: Players have drawn their cards
-Round 51: Player AI Player 3 won this round
-The winning card was 'Sabre':
-   > size: 2
-   > speed: 7 <--
-   > range: 2
-   > firepower: 5
-   > cargo: 0
-
-
-Round 52
-Round 52: Players have drawn their cards
-Round 52: Player AI Player 1 won this round
-The winning card was 'm50':
-   > size: 1
-   > speed: 10 <--
-   > range: 2
-   > firepower: 2
-   > cargo: 0
-
-
-Round 53
-Round 53: Players have drawn their cards
-Round 53: Player AI Player 1 won this round
-The winning card was '350r':
-   > size: 1
-   > speed: 9 <--
-   > range: 2
-   > firepower: 3
-   > cargo: 0
-
-
-Round 54
-Round 54: Players have drawn their cards
-Round 54: Player AI Player 1 won this round
-The winning card was 'Carrack':
-   > size: 6
-   > speed: 2
-   > range: 10 <--
-   > firepower: 4
-   > cargo: 6
-
-
-Round 55
-Round 55: Players have drawn their cards
-Round 55: Player AI Player 1 won this round
-The winning card was 'm50':
-   > size: 1
-   > speed: 10 <--
-   > range: 2
-   > firepower: 2
-   > cargo: 0
-
-
-Round 56
-Round 56: Players have drawn their cards
-Round 56: Player AI Player 1 won this round
-The winning card was 'Sabre':
-   > size: 2
-   > speed: 7 <--
-   > range: 2
-   > firepower: 5
-   > cargo: 0
-
-
-Round 57
-Round 57: Players have drawn their cards
-Round 57: Player AI Player 1 won this round
-The winning card was 'Carrack':
-   > size: 6
-   > speed: 2
-   > range: 10 <--
-   > firepower: 4
-   > cargo: 6
-
-
-Round 58
-Round 58: Players have drawn their cards
-Round 58: Player AI Player 1 won this round
-The winning card was 'Hurricane':
-   > size: 2
-   > speed: 5 <--
-   > range: 3
-   > firepower: 5
-   > cargo: 0
-
-
-Round 59
-Round 59: Players have drawn their cards
-Round 59: Player AI Player 1 won this round
-The winning card was 'Merchantman':
-   > size: 7
-   > speed: 3
-   > range: 5
-   > firepower: 6
-   > cargo: 8 <--
-
-
-Round 60
-Round 60: Players have drawn their cards
-Round 60: Player AI Player 1 won this round
-The winning card was '350r':
-   > size: 1
-   > speed: 9 <--
-   > range: 2
-   > firepower: 3
-   > cargo: 0
-
-
-Round 61
-Round 61: Players have drawn their cards
-Round 61: This round was a Draw, common pile now has 2 cards
-The winning card was 'Hornet':
-   > size: 2
-   > speed: 5 <--
-   > range: 3
-   > firepower: 4
-   > cargo: 1
-
-
-Round 62
-Round 62: Players have drawn their cards
-Round 62: Player AI Player 1 won this round
-The winning card was 'Orion':
-   > size: 10 <--
-   > speed: 1
-   > range: 6
-   > firepower: 2
-   > cargo: 9
-
-
-Round 63
-Round 63: Players have drawn their cards
-Round 63: Player AI Player 1 won this round
-The winning card was 'Vanguard':
-   > size: 3
-   > speed: 4
-   > range: 5 <--
-   > firepower: 5
-   > cargo: 2
-
-
-Round 64
-Round 64: Players have drawn their cards
-Round 64: Player AI Player 1 won this round
-The winning card was 'Constellation':
-   > size: 4
-   > speed: 5
-   > range: 7 <--
-   > firepower: 3
-   > cargo: 4
-
-
-Round 65
-Round 65: Players have drawn their cards
-Round 65: Player AI Player 1 won this round
-The winning card was 'Hurricane':
-   > size: 2
-   > speed: 5 <--
-   > range: 3
-   > firepower: 5
-   > cargo: 0
-
-
-Round 66
-Round 66: Players have drawn their cards
-Round 66: Player AI Player 1 won this round
-The winning card was 'Sabre':
-   > size: 2
-   > speed: 7 <--
-   > range: 2
-   > firepower: 5
-   > cargo: 0
-
-
-Round 67
-Round 67: Players have drawn their cards
-Round 67: Player AI Player 1 won this round
-The winning card was 'Constellation':
-   > size: 4
-   > speed: 5
-   > range: 7 <--
-   > firepower: 3
-   > cargo: 4
-
-
-
-The overall winner was AI Player 1
-Scores:
-   You: 0
-   AI Player 1: 40
-   AI Player 2: 0
-   AI Player 3: 14
-   AI Player 4: 4
-
-
-Do you want to see past results or play a game?
-   1: Print Game Statistics
-   2: Play game
-   3: Quit game
-Enter the number for your selection: 1
-
-
-Game Start
-Do you want to see past results or play a game?
-   1: Print Game Statistics
-   2: Play game
-   3: Quit game

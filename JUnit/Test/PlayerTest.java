@@ -1,18 +1,15 @@
 package Test;
 
-import static org.junit.Assert.*;
-
-import static org.hamcrest.CoreMatchers.is; 
-import static org.hamcrest.MatcherAssert.assertThat; 
-
+import basic.Card;
+import basic.Player;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import java.util.LinkedList;
 import java.util.Queue;
 
-import basic.Card;
-import basic.Player;
+import static org.hamcrest.CoreMatchers.is;
+import static org.hamcrest.MatcherAssert.assertThat;
 
 
 class PlayerTest {
@@ -37,7 +34,7 @@ class PlayerTest {
 		 listTest.offer(c2);
 	}
 
-	@org.junit.Test
+	@Test
 	void testAdd() {
 		playertest.add(c1);
 		assertThat(playertest.getCards().peek(),is(c1));

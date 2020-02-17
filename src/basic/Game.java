@@ -2,11 +2,11 @@ package basic;
 
 import java.io.File;
 
+//start a new game
 public class Game {
 
 
     private Model model;
-    private int round;
 
     public Game(int numPeople) {
         if (numPeople < 2 || numPeople > 5) {
@@ -16,9 +16,6 @@ public class Game {
         //game initial
         model = new Model(numPeople);
         model.distributeCards(new File("StarCitizenDeck.txt"));
-//        for (Player p:model.getPlayers()){
-//            System.out.println(p.getName()+" "+p.getCards().size());
-//        }
 
         model.setPrintLost(false);
 
@@ -28,10 +25,6 @@ public class Game {
 
     public Model getModel() {
         return model;
-    }
-
-    public int getRound() {
-        return round;
     }
 
     public boolean isUserAlive() {

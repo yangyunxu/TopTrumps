@@ -1,5 +1,8 @@
 package basic;
 
+/*
+card object
+ */
 public class Card {
     private String description;
     private int[] categories;
@@ -14,7 +17,8 @@ public class Card {
     public Card(String s){
         categories = new int[5];
         String[] properties = s.trim().split(" ");
-        description = properties[0];
+        description = properties[0];//card name
+        //categories
         categories[0] = Integer.parseInt(properties[1]);
         categories[1] = Integer.parseInt(properties[2]);
         categories[2] = Integer.parseInt(properties[3]);

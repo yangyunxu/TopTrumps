@@ -1,9 +1,11 @@
 package basic;
 
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.Collections;
 
+/*
+the cards will be put here if the round is a draw
+ */
 public class CommunalPile {
 
     private ArrayList<Card> cards;
@@ -11,6 +13,7 @@ public class CommunalPile {
     public CommunalPile(){
         cards = new ArrayList<Card>();
     }
+
 
     public void addCards(ArrayList<Card> manyCards){
         cards.addAll(manyCards);

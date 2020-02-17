@@ -183,7 +183,7 @@ public class Database {
 	}
 	
 	//query
-
+	//statistics
 	public static String printString() {
 		String result = "Number of Games: " + getNumberOfGames() + "\n"
 				+ "Number of Human Wins: " + getNumberOfHumanWins() + "\n"

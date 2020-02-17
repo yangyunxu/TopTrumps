@@ -34,6 +34,13 @@ class CardTest {
 	}
 
 	@Test
+	final void getCategoryValue() {
+		assertThat(cardTest.getCategoryValue(1),is(1));
+		assertThat(cardTest.getCategoryValue(2),is(2));
+		assertThat(cardTest.getCategoryValue(3),is(3));
+	}
+
+	@Test
 	final void testGetSize() {
 		assertThat(cardTest.getSize(),is(1));
 	}

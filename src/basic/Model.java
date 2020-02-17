@@ -1,13 +1,11 @@
 package basic;
 
 import commandline.TopTrumpsCLIApplication;
+import org.apache.log4j.Level;
+import org.apache.log4j.Logger;
 
 import java.io.*;
 import java.util.*;
-//import java.util.logging.ConsoleHandler;
-//import java.util.logging.Level;
-//import java.util.logging.Logger;
-import org.apache.log4j.Logger;
 
 public class Model {
 
@@ -23,7 +21,6 @@ public class Model {
     private boolean Draw, printLost;
     private int numberOfDraws;
     private int[] scoreOfPlayers;
-//    private Logger mylogger;
     private String info;
     private Logger mylogger = Logger.getLogger(Model.class);
 
@@ -32,6 +29,10 @@ public class Model {
     constructor
      */
     public Model(int numPeople){
+        if(!TopTrumpsCLIApplication.getTestFlag()){
+            mylogger.setLevel(Level.OFF);
+        }
+
         //create players
         players = new ArrayList<Player>();
         Player user = new Player("You", true);
@@ -54,7 +55,6 @@ public class Model {
         scoreOfPlayers = new int[]{0, 0, 0, 0, 0};
         copy_players = new ArrayList<>(players);
         printLost = false;
-//        mylogger = Logger.getLogger("toplog");
     }
 
     //distribute cards to players randomly
@@ -238,7 +238,7 @@ public class Model {
             //AI choose category randomly
             //num = random.nextInt(5)+1;
 
-            //AI choose category which is the max
+            //AI choose category with the max value
             int tempInt = c.getSize();
             num = 1;
             for(int i=1;i<5;i++){

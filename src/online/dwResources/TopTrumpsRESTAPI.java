@@ -36,12 +36,10 @@ public class TopTrumpsRESTAPI {
 	private boolean gameContinue;
 
 
-
 	ObjectWriter oWriter = new ObjectMapper().writerWithDefaultPrettyPrinter();
 
 	public TopTrumpsRESTAPI(TopTrumpsJSONConfiguration conf) throws IOException {
 		launchGame();
-
 	}
 
 	@GET
@@ -76,7 +74,8 @@ public class TopTrumpsRESTAPI {
 
 	@GET
 	@Path("/numberAi")
-	public void numberAiPlayers(@QueryParam("number") int number) throws IOException {
+	public void numberAiPlayers(@QueryParam("number") int number) {
+
 		players = new ArrayList<Player>();
 		Player user = new Player(userName, true);
 		players.add(user);
@@ -100,12 +99,10 @@ public class TopTrumpsRESTAPI {
 			Collections.shuffle(cardList);
 			Iterator<Player> it = players.iterator();
 			for(Card c:cardList){
-				if(it.hasNext()){
-					it.next().add(c);
-				}else {
+				if (!it.hasNext()) {
 					it = players.iterator();
-					it.next().add(c);
 				}
+				it.next().add(c);
 			}
 		}catch (FileNotFoundException e){
 			e.printStackTrace();
@@ -146,6 +143,7 @@ public class TopTrumpsRESTAPI {
 		}
 	}
 
+	//get the category chose by human player
 	@GET
 	@Path("/getUserCategory")
 	public String getUserCategory(@QueryParam("number") int number) throws IOException{
@@ -169,6 +167,7 @@ public class TopTrumpsRESTAPI {
 	}
 
 
+	//set up the human player name
 	@GET
 	@Path("/userName")
 	public void setUserName(@QueryParam("name") String name) throws IOException {
@@ -209,6 +208,7 @@ public class TopTrumpsRESTAPI {
 
 	}
 
+	//each player draws a card from the topmost
 	public void drawCards(){
 		if(roundCard!=null){
 			roundCard.clear();
@@ -230,6 +230,7 @@ public class TopTrumpsRESTAPI {
 		return result;
 	}
 
+	//begin a round
 	public void startRound(){
 		round++;
 		winningCards = CardWithMaxValue(roundCard, category);
@@ -250,6 +251,7 @@ public class TopTrumpsRESTAPI {
 
 	}
 
+	//get the winner card
 	public ArrayList<Card> CardWithMaxValue(ArrayList<Card> tempCards, int category){
 		//1-Size 2-Speed 3-Range 4-Firepower 5-Cargo
 
@@ -316,7 +318,7 @@ public class TopTrumpsRESTAPI {
 
 	}
 
-
+	//insert data into database
 	public void inserDatabase() {
 		ArrayList<Integer> data = new ArrayList();
 		data.add(numberGames);//number of games
