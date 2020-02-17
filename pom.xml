@@ -24,12 +24,20 @@
 		<exclusions>
 			<exclusion>
 				<groupId>org.slf4j</groupId>
-				<artifactId>*</artifactId>
+				<artifactId>log4j-over-slf4j</artifactId>
 			</exclusion>
 			<exclusion>
 				<groupId>org.slf4j</groupId>
-				<artifactId>slf4j-api</artifactId>
+				<artifactId>jcl-over-slf4j</artifactId>
 			</exclusion>
+<!--			<exclusion>-->
+<!--				<groupId>org.slf4j</groupId>-->
+<!--				<artifactId>jul-to-slf4j</artifactId>-->
+<!--			</exclusion>-->
+<!--			<exclusion>-->
+<!--				<groupId>org.slf4j</groupId>-->
+<!--				<artifactId>slf4j-api</artifactId>-->
+<!--			</exclusion>-->
 		</exclusions>
     </dependency>
 
@@ -38,6 +46,11 @@
 		  <artifactId>log4j</artifactId>
 		  <version>1.2.17</version>
 	  </dependency>
+<!--	  <dependency>-->
+<!--		  <groupId>org.slf4j</groupId>-->
+<!--		  <artifactId>slf4j-log4j12</artifactId>-->
+<!--		  <version>1.7.12</version>-->
+<!--	  </dependency>-->
     <!-- When hosting a website with dropwizard, we need to specify a language for writing views,
          In this case, we are using freemarker https://freemarker.apache.org/ -->
 	<dependency>
